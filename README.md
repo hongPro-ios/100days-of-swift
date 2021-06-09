@@ -1,14 +1,15 @@
 # 100days-of-swift
 https://www.hackingwithswift.com/100
 
-for my study motivation
+### for my study motivation!!
 
 
 
 Days 1-12: Introduction to Swift
 The first 12 days provide a gentle warm up for your Swift learning. You’ll watch about a selection of one-minute videos every day, and complete short quizzes about each of those videos.
 
-- [x] Day1 – variables, simple data types, and string interpolation
+- [x] ~~Day1 – variables, simple data types, and string interpolation~~
+ - 20210609 메모: https://www.notion.so/Day-1-variables-simple-data-types-and-string-interpolation-bdc7c58fb8e94106a15001f619a0defd
 - [ ] Day2 – arrays, dictionaries, sets, and enums
 - [ ] Day3 – operators and conditions
 - [ ] Day4 – loops, loops, and more loops
