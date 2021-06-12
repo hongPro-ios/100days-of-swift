@@ -13,8 +13,9 @@ The first 12 days provide a gentle warm up for your Swift learning. You’ll wat
 - [x] ~~Day2 – arrays, dictionaries, sets, and enums~~
  - 20210610 메모: https://www.notion.so/Day2-af96e33ee0674a07857cb3ea5eb28048
 - [x] ~~Day3 – operators and conditions~~
-- 20210611 메모: https://www.notion.so/3day-25edfb1005894e44a7511e255c2c58ec
-- [ ] Day4 – loops, loops, and more loops
+ - 20210611 메모: https://www.notion.so/3day-25edfb1005894e44a7511e255c2c58ec
+- [x] ~~Day4 – loops, loops, and more loops~~
+ - 20210612 메모: https://www.notion.so/4day-a81cb978078c46dd819a42c30dbad439
 - [ ] Day5 – functions, parameters, and errors
 - [ ] Day6 – closures part one
 - [ ] Day7 – closures part two
