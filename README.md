@@ -18,7 +18,8 @@ The first 12 days provide a gentle warm up for your Swift learning. You’ll wat
  - 20210612 메모: https://www.notion.so/4day-a81cb978078c46dd819a42c30dbad439
 - [x] ~~Day5 – functions, parameters, and errors~~
  - 20210613 메모: https://www.notion.so/5day-62e3f7d6c86145f6a3a9139cf0eb98f9
-- [ ] Day6 – closures part one
+- [x] ~~Day6 – closures part one~~
+ - 20210614 메모: https://www.notion.so/6day-934fc0a0e49f4ee88cb9f73f59859b62
 - [ ] Day7 – closures part two
 - [ ] Day8 – structs, properties, and methods
 - [ ] Day9 – access control, static properties, and laziness
