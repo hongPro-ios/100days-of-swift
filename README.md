@@ -28,7 +28,8 @@ The first 12 days provide a gentle warm up for your Swift learning. You’ll wat
  - 20210617 메모: https://www.notion.so/9day-3f7bd498111c4ec9b2ac4804eb66d615
 - [x] ~~Day10 – classes and inheritance~~
  - 20210618 메모: https://www.notion.so/10day-0528f57fbcbe4ba8bd616a45557338ad
-- [ ] Day11 – protocols, extensions, and protocol extensions
+- [x] ~~Day11 – protocols, extensions, and protocol extensions~~
+ - 20210619 메모: https://www.notion.so/11day-37fcab5c198c43ab892e46c60a24b1ea
 - [ ] Day12 – optionals, unwrapping, and typecasting
  
 
