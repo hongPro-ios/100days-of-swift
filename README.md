@@ -30,7 +30,8 @@ The first 12 days provide a gentle warm up for your Swift learning. You’ll wat
  - 20210618 메모: https://www.notion.so/10day-0528f57fbcbe4ba8bd616a45557338ad
 - [x] ~~Day11 – protocols, extensions, and protocol extensions~~
  - 20210619 메모: https://www.notion.so/11day-37fcab5c198c43ab892e46c60a24b1ea
-- [ ] Day12 – optionals, unwrapping, and typecasting
+- [x] ~~Day12 – optionals, unwrapping, and typecasting~~
+ - 20210620 메모: https://www.notion.so/12day-322f1d6c1f014562a2e60cb61616de61
  
 
 Days 13-15: Consolidation I
