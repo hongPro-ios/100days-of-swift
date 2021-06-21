@@ -37,7 +37,8 @@ The first 12 days provide a gentle warm up for your Swift learning. You’ll wat
 Days 13-15: Consolidation I
 You just learned a lot about Swift in only 12 days, so before we continue it's important you reflect on what you've learned: look for weak spots, re-watch videos, re-take tests, and so on, until you feel comfortable that you have mastered all the Swift language fundamentals covered in days 1-12.
 
-- [ ] Day13 – Swift review, day one
+- [x] ~~Day13 – Swift review, day one~~
+ - 20210621 메모: https://www.notion.so/13day-c07606a81fe24a6a9753139f6658d32a
 - [ ] Day14 – Swift review, day two
 - [ ] Day15 – Swift review, day three
  
