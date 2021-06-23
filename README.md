@@ -41,7 +41,8 @@ You just learned a lot about Swift in only 12 days, so before we continue it's i
  - 20210621 메모: https://www.notion.so/13day-c07606a81fe24a6a9753139f6658d32a
 - [x] ~~Day14 – Swift review, day two~~
  - 20210622 메모: https://www.notion.so/14day-d4385086efc14befb5683db901b3258b
-- [ ] Day15 – Swift review, day three
+- [x] ~~Day15 – Swift review, day three~~
+ - 20210623 메모: https://www.notion.so/15day-c8179bfe20784a3e960dd1de9565918f
  
 
 Days 16-22: Starting iOS
