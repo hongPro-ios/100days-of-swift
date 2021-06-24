@@ -48,7 +48,8 @@ You just learned a lot about Swift in only 12 days, so before we continue it's i
 Days 16-22: Starting iOS
 Now that you’ve mastered the basics of Swift, in these days you’ll start building real iOS apps using what you learned.
 
-- [ ] Day16 – Project 1, part one
+- [x] ~~Day16 – Project 1, part one~~
+ - 20210624 메모: https://www.notion.so/16day-ae0f805cf9ef409ca70c63ed493634b9
 - [ ] Day17 – Project 1, part two
 - [ ] Day18 – Project 1, part three
 - [ ] Day19 – Project 2, part one
