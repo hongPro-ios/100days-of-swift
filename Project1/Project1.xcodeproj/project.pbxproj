@@ -17,6 +17,7 @@
 		3D138384268405CD00B14C9C /* nssl_marine_debris_hawaii_NOAAphoto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D138380268405CD00B14C9C /* nssl_marine_debris_hawaii_NOAAphoto.jpg */; };
 		3D138385268405CD00B14C9C /* nssl_carbon_cycle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D138381268405CD00B14C9C /* nssl_carbon_cycle.jpg */; };
 		3D138386268405CD00B14C9C /* nssl_turtle_oil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3D138382268405CD00B14C9C /* nssl_turtle_oil.jpg */; };
+		3D48291726856A4E008516F5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48291626856A4E008516F5 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3D138380268405CD00B14C9C /* nssl_marine_debris_hawaii_NOAAphoto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl_marine_debris_hawaii_NOAAphoto.jpg; sourceTree = "<group>"; };
 		3D138381268405CD00B14C9C /* nssl_carbon_cycle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl_carbon_cycle.jpg; sourceTree = "<group>"; };
 		3D138382268405CD00B14C9C /* nssl_turtle_oil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl_turtle_oil.jpg; sourceTree = "<group>"; };
+		3D48291626856A4E008516F5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				3D13836A268401A700B14C9C /* AppDelegate.swift */,
 				3D13836C268401A700B14C9C /* SceneDelegate.swift */,
 				3D13836E268401A700B14C9C /* ViewController.swift */,
+				3D48291626856A4E008516F5 /* DetailViewController.swift */,
 				3D138370268401A700B14C9C /* Main.storyboard */,
 				3D138373268401A900B14C9C /* Assets.xcassets */,
 				3D138375268401A900B14C9C /* LaunchScreen.storyboard */,
@@ -164,6 +167,7 @@
 				3D13836F268401A700B14C9C /* ViewController.swift in Sources */,
 				3D13836B268401A700B14C9C /* AppDelegate.swift in Sources */,
 				3D13836D268401A700B14C9C /* SceneDelegate.swift in Sources */,
+				3D48291726856A4E008516F5 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
