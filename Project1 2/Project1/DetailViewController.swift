@@ -11,7 +11,6 @@ class DetailViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     var selectedImage: String?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,11 +18,14 @@ class DetailViewController: UIViewController {
         
         navigationItem.largeTitleDisplayMode = .never
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareApp))
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action,
+                                                            target: self,
+                                                            action: #selector(shareTapped))
+
         if let imageToLoad = selectedImage {
             imageView.image = UIImage(named: imageToLoad)
         }
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,12 +38,15 @@ class DetailViewController: UIViewController {
         navigationController?.hidesBarsOnTap = false
     }
     
-   @objc func shareApp() {
-    let items: [Any] = [URL(string: "https://www.apple.com")!]
-    let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
-    
-    ac.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
-    
-    present(ac, animated: true)
+    @objc func shareTapped() {
+        
+        guard let image = imageView.image?.jpegData(compressionQuality: 0.8) else {
+            print("No image found")
+            return
+        }
+        
+        let viewController = UIActivityViewController(activityItems: [image], applicationActivities: [])
+        viewController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(viewController, animated: true)
     }
 }
