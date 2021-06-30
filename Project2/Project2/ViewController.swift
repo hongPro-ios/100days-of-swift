@@ -78,7 +78,17 @@ class ViewController: UIViewController {
         firstButton.layer.borderColor = UIColor.lightGray.cgColor
         secondButton.layer.borderColor = UIColor.lightGray.cgColor
         thirdButton.layer.borderColor = UIColor.lightGray.cgColor
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Check score", style: .plain, target: self, action: #selector(alertScore))
     }
+    
+    @objc func alertScore() {
+        let alertScore = UIAlertController(title: "Score", message: "Score is now \(score)", preferredStyle: .alert)
+        let alertCloseAction = UIAlertAction(title: "Close", style: .destructive, handler: nil)
+        alertScore.addAction(alertCloseAction)
+        present(alertScore, animated: true)
+    }
+
     
     func resetGame(alertAction: UIAlertAction! = nil) {
         score = 0
@@ -108,6 +118,7 @@ class ViewController: UIViewController {
             return false
         }
     }
+    
 
 }
 
