@@ -60,7 +60,8 @@ Now that you’ve mastered the basics of Swift, in these days you’ll start bui
  - 20210628 메모: https://www.notion.so/20day-78f11b7e2954450099105fbba77aeab9
 - [x] ~~Day21 – Project 2, part three~~
  - 20210629 메모: https://www.notion.so/21day-8b5b6045944c4c60ab6f7e656d30e3e0
-- [ ] Day22 – Project 3
+- [x] ~~Day22 – Project 3~~
+ - 20210630 메모: https://www.notion.so/22day-faa8bf39022c489f8bfe2c64f448f10d
  
 
 - [ ] Day23: Consolidation II
