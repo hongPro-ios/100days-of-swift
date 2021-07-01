@@ -64,8 +64,9 @@ Now that you’ve mastered the basics of Swift, in these days you’ll start bui
  - 20210630 메모: https://www.notion.so/22day-faa8bf39022c489f8bfe2c64f448f10d
  
 
-- [ ] Day23: Consolidation II
+- [x] ~~Day23: Consolidation II~~
 In the last few days we covered some of the fundamentals of iOS development, and before we move on to the next set of projects it’s important to take a step back and review what you’ve learned.
+ - 20210701 https://www.notion.so/23day-7fd8ecaf3fb3494b92c660c979282564
 
 - [ ] Day23 – Milestone: Projects 1-3
  
