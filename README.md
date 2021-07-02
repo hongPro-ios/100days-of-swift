@@ -64,17 +64,17 @@ Now that you’ve mastered the basics of Swift, in these days you’ll start bui
  - 20210630 메모: https://www.notion.so/22day-faa8bf39022c489f8bfe2c64f448f10d
  
 
-- [x] ~~Day23: Consolidation II~~
+Day23: Consolidation II
 In the last few days we covered some of the fundamentals of iOS development, and before we move on to the next set of projects it’s important to take a step back and review what you’ve learned.
- - 20210701 https://www.notion.so/23day-7fd8ecaf3fb3494b92c660c979282564
 
-- [ ] Day23 – Milestone: Projects 1-3
- 
+- [x] ~~Day23 – Milestone: Projects 1-3~~
+ - 20210701 메모: https://www.notion.so/23day-7fd8ecaf3fb3494b92c660c979282564
 
 Days 24-31: Web views, user input, and Auto Layout
 The next three projects we’re looking at will push your iOS skills further as you create some user interface in code, manage table views more carefully, and get some experience with closures.
 
-- [ ] Day24 – Project 4, part one
+- [x] ~~Day24 – Project 4, part one~~
+ - 20210702 메모: https://www.notion.so/24day-e37c0c5f635f4006a44a33b7cf4d710f
 - [ ] Day25 – Project 4, part two
 - [ ] Day26 – Project 4, part three
 - [ ] Day27 – Project 5, part one
