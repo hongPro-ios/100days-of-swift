@@ -76,8 +76,9 @@ The next three projects we’re looking at will push your iOS skills further as 
 - [x] ~~Day24 – Project 4, part one~~
  - 20210702 메모: https://www.notion.so/24day-e37c0c5f635f4006a44a33b7cf4d710f
 - [x] ~~Day25 – Project 4, part two~~
- - 20210703 메뫼: https://www.notion.so/25day-d279ea07b4a340aa911f61488c43cc5f
-- [ ] Day26 – Project 4, part three
+ - 20210703 메모: https://www.notion.so/25day-d279ea07b4a340aa911f61488c43cc5f
+- [x] ~~Day26 – Project 4, part three~~
+ - 20210704 메모: https://www.notion.so/26day-0806c6c9f47b4b4dae73f52ab71800a0
 - [ ] Day27 – Project 5, part one
 - [ ] Day28 – Project 5, part two
 - [ ] Day29 – Project 5, part three
