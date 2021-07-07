@@ -22,7 +22,7 @@ class Project5Tests: XCTestCase {
     func testInputtedWordIsPossible() throws {
         viewController.title = "abcdee"
         
-        var inputtedWord = "a"
+        let inputtedWord = "a"
         
         do {
             try viewController.isPossible(word: inputtedWord)
