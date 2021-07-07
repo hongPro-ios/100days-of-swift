@@ -11,7 +11,9 @@ enum ValidationError: Error {
     case useSellingOutOfBounds
     case notOriginal
     case notRealWord
-    case etc
+    case shorterThanThreeLetters
+    case sameWithTitle
+    case unknown
     
     var title: String {
         switch self {
@@ -21,8 +23,12 @@ enum ValidationError: Error {
             return "Word used already"
         case .notRealWord:
             return "Word not recognized"
-        case .etc:
-            return "etc"
+        case .shorterThanThreeLetters:
+            return  "Word is too short"
+        case .sameWithTitle:
+            return "Word is same with title"
+        case .unknown:
+            return "unknown"
         }
     }
     
@@ -34,8 +40,12 @@ enum ValidationError: Error {
             return "Be more original!"
         case .notRealWord:
             return "You can't just make them up, you know!"
-        case .etc:
-            return "etc"
+        case .shorterThanThreeLetters:
+            return "User more than 3 words"
+        case .sameWithTitle:
+            return "Title word is not allowed"
+        case .unknown:
+            return "unknown"
         }
     }
 }
@@ -46,17 +56,19 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
-                                                            target: self,
-                                                            action: #selector(promptForAnswer))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .refresh,
+            target: self,
+            action: #selector(startGame))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(promptForAnswer))
         
         guard
             let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt"),
             let startWords = try? String(contentsOf: startWordsURL)
-        else {
-            return
-        }
+        else { return }
         
         allWords = startWords.components(separatedBy: "\n")
         startGame()
@@ -72,18 +84,17 @@ class ViewController: UITableViewController {
         return cell
     }
     
-    func startGame() {
+    @objc func startGame() {
         title = allWords.randomElement()
         usedWords.removeAll(keepingCapacity: true)
         tableView.reloadData()
-        
     }
     
     func submit(_ answer: String) {
         let lowercasedAnswer = answer.lowercased()
         
         if validateWord(answer: lowercasedAnswer) {
-            usedWords.insert(answer, at: 0)
+            usedWords.insert(lowercasedAnswer, at: 0)
             
             let indexPath = IndexPath(row: 0, section: 0)
             tableView.insertRows(at: [indexPath], with: .automatic)
@@ -95,36 +106,44 @@ class ViewController: UITableViewController {
             try isPossible(word: answer)
             try isOriginal(word: answer)
             try isReal(word: answer)
-        
+            try isLettersMoreThanTree(word: answer)
+            try isSameWithTitle(word: answer)
             return true
         } catch let validationError as ValidationError {
-            let ac = UIAlertController(title: validationError.title, message: validationError.message, preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default))
-            present(ac, animated: true)
-            
+            showErrorMessages(error: validationError)
             return false
         } catch {
             return false
         }
     }
     
+    func showErrorMessages(error: ValidationError) {
+        let ac = UIAlertController(title: error.title, message: error.message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
+    
     @objc func promptForAnswer() {
-        let alertController = UIAlertController(title: "Enter answer", message: nil, preferredStyle: .alert)
-        let submitAction = UIAlertAction(title: "Submit", style: .default) { [weak self, weak alertController] _ in
+        let alertController = UIAlertController(
+            title: "Enter answer",
+            message: nil,
+            preferredStyle: .alert)
+        let submitAction = UIAlertAction(
+            title: "Submit",
+            style: .default) { [weak self, weak alertController] _ in
             guard let answer = alertController?.textFields?[0].text else { return }
             self?.submit(answer)
         }
         
         alertController.addTextField()
         alertController.addAction(submitAction)
-        
         alertController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
         
         present(alertController, animated: true)
     }
-   
+    
     func isPossible(word: String) throws  {
-        guard var tempWord = title?.lowercased() else { throw ValidationError.etc }
+        guard var tempWord = title?.lowercased() else { return }
         
         for letter in word {
             if let position = tempWord.firstIndex(of: letter) {
@@ -133,7 +152,6 @@ class ViewController: UITableViewController {
                 throw ValidationError.useSellingOutOfBounds
             }
         }
-        
     }
     
     func isOriginal(word: String) throws {
@@ -154,7 +172,18 @@ class ViewController: UITableViewController {
         if !(misspelledRange.location == NSNotFound) {
             throw ValidationError.notRealWord
         }
-        
+    }
+    
+    func isLettersMoreThanTree(word: String) throws {
+        if word.utf16.count <= 3 {
+            throw ValidationError.shorterThanThreeLetters
+        }
+    }
+    
+    func isSameWithTitle(word: String) throws {
+        if word == title?.lowercased() {
+            throw ValidationError.sameWithTitle
+        }
     }
     
 }
