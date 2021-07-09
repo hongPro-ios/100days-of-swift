@@ -87,7 +87,8 @@ The next three projects we’re looking at will push your iOS skills further as 
  - 20210707 메모: https://www.notion.so/29day-e840508da3bc48eca2c42732fff8cf61
 - [x] ~~Day30 – Project 6, part one~~
  - 20210708 메모: https://www.notion.so/30day-7cb3c024727d4f9ba454034f49654e41
-- [ ] Day31 – Project 6, part two
+- [x] ~~Day31 – Project 6, part two~~
+ - 20210709 메모: https://www.notion.so/31day-a30f9f6cd3604294b54a55b4bdfa1b6c
  
 
 - [ ] Day32: Consolidation III
