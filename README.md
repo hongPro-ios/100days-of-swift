@@ -94,7 +94,8 @@ The next three projects we’re looking at will push your iOS skills further as 
 - [ ] Day32: Consolidation III
 You’ve learned about WebKit, UIAlertController, Auto Layout, and more – some more fundamentals of iOS development. Before we continue on to more projects, let’s take a moment to review what you’ve learned.
 
-- [ ] Day32 – Milestone: Projects 4-6
+- [x] ~~Day32 – Milestone: Projects 4-6~~
+ - 20210710 메모: https://www.notion.so/32day-9b15268315c7416caebed7b5cfb3040c
  
 
 Days 33-40: Codable, buttons, and GCD

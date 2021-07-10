@@ -32,32 +32,9 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let OpenBarButtonItem = UIBarButtonItem(
-            title: "Open",
-            style: .plain,
-            target: self,
-            action: #selector(openTapped))
-        
-        navigationItem.rightBarButtonItem = OpenBarButtonItem
-        
-        
-        let url = URL(string: "https://" + initSite.url)!
-        webView.load(URLRequest(url: url))
-        webView.allowsBackForwardNavigationGestures = true
-        
-        let goBack = UIBarButtonItem(barButtonSystemItem: .undo, target: webView, action: #selector(webView.goBack))
-        let goForward = UIBarButtonItem(barButtonSystemItem: .redo, target: webView, action: #selector(webView.goForward))
-        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
-        
-        progressView = UIProgressView(progressViewStyle: .default)
-        progressView.sizeToFit()
-        let progressButton = UIBarButtonItem(customView: progressView)
-        
-        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
-        
-        toolbarItems = [goBack, goForward, progressButton, spacer, refresh]
-        navigationController?.isToolbarHidden = false
+        setupUI()
+        setupUX()
+        initOpenPage()
     }
     
     override func observeValue(
@@ -93,6 +70,49 @@ class WebViewController: UIViewController {
         else { return }
         
         webView.load(URLRequest(url: url))
+    }
+    
+    func setupUI() {
+        setupNavigationBar()
+        setupToolbar()
+    }
+    func setupUX() {
+        webView.allowsBackForwardNavigationGestures = true
+        
+        setupObserver()
+    }
+    
+    func initOpenPage() {
+        let url = URL(string: "https://" + initSite.url)!
+        webView.load(URLRequest(url: url))
+    }
+    
+    private func setupNavigationBar() {
+        let OpenBarButtonItem = UIBarButtonItem(
+            title: "Open",
+            style: .plain,
+            target: self,
+            action: #selector(openTapped))
+        
+        navigationItem.rightBarButtonItem = OpenBarButtonItem
+    }
+    
+    private func setupToolbar() {
+        let goBack = UIBarButtonItem(barButtonSystemItem: .undo, target: webView, action: #selector(webView.goBack))
+        let goForward = UIBarButtonItem(barButtonSystemItem: .redo, target: webView, action: #selector(webView.goForward))
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
+        
+        progressView = UIProgressView(progressViewStyle: .default)
+        progressView.sizeToFit()
+        let progressButton = UIBarButtonItem(customView: progressView)
+        
+        toolbarItems = [goBack, goForward, progressButton, spacer, refresh]
+        navigationController?.isToolbarHidden = false
+    }
+    
+    private func setupObserver() {
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
     }
     
 }
