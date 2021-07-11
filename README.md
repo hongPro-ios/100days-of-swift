@@ -101,7 +101,8 @@ You’ve learned about WebKit, UIAlertController, Auto Layout, and more – some
 Days 33-40: Codable, buttons, and GCD
 The next three projects we’ll be building projects where you meet some of the most important topics in iOS development: working with data from the internet, and taking advantage of the raw power of iOS devices. Of course, you’ll also be making useful products along the way!
 
-- [ ] Day33 – Project 7, part one
+- [x] ~~Day33 – Project 7, part one~~
+ - 20210711 메모: https://www.notion.so/33day-8b0641c0bcf946e49774f23f63e7b04d
 - [ ] Day34 – Project 7, part two
 - [ ] Day35 – Project 7, part three
 - [ ] Day36 – Project 8, part one
