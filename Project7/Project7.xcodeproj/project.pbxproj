@@ -15,6 +15,7 @@
 		3D0E2A84269B03C80083E5B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0E2A82269B03C80083E5B5 /* LaunchScreen.storyboard */; };
 		3D0E2A8C269B0A520083E5B5 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E2A8B269B0A520083E5B5 /* Petition.swift */; };
 		3D0E2A8E269B0AD80083E5B5 /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E2A8D269B0AD80083E5B5 /* Petitions.swift */; };
+		3D5C101E269BD0540010D521 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C101D269BD0540010D521 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3D0E2A85269B03C80083E5B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D0E2A8B269B0A520083E5B5 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 		3D0E2A8D269B0AD80083E5B5 /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		3D5C101D269BD0540010D521 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3D0E2A77269B03C80083E5B5 /* AppDelegate.swift */,
 				3D0E2A79269B03C80083E5B5 /* SceneDelegate.swift */,
 				3D0E2A7B269B03C80083E5B5 /* ViewController.swift */,
+				3D5C101D269BD0540010D521 /* DetailViewController.swift */,
 				3D0E2A7D269B03C80083E5B5 /* Main.storyboard */,
 				3D0E2A80269B03C80083E5B5 /* Assets.xcassets */,
 				3D0E2A82269B03C80083E5B5 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 				3D0E2A7C269B03C80083E5B5 /* ViewController.swift in Sources */,
 				3D0E2A8C269B0A520083E5B5 /* Petition.swift in Sources */,
 				3D0E2A78269B03C80083E5B5 /* AppDelegate.swift in Sources */,
+				3D5C101E269BD0540010D521 /* DetailViewController.swift in Sources */,
 				3D0E2A7A269B03C80083E5B5 /* SceneDelegate.swift in Sources */,
 				3D0E2A8E269B0AD80083E5B5 /* Petitions.swift in Sources */,
 			);
