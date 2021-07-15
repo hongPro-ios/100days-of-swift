@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D74B181269FBDE300EE681C /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3D74B17F269FBDE300EE681C /* level1.txt */; };
+		3D74B182269FBDE300EE681C /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3D74B180269FBDE300EE681C /* level2.txt */; };
 		3DBF0D14269E717700408B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF0D13269E717700408B21 /* AppDelegate.swift */; };
 		3DBF0D16269E717700408B21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF0D15269E717700408B21 /* SceneDelegate.swift */; };
 		3DBF0D18269E717700408B21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF0D17269E717700408B21 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D74B17F269FBDE300EE681C /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		3D74B180269FBDE300EE681C /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 		3DBF0D10269E717700408B21 /* Project8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DBF0D13269E717700408B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DBF0D15269E717700408B21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 		3DBF0D12269E717700408B21 /* Project8 */ = {
 			isa = PBXGroup;
 			children = (
+				3D74B17F269FBDE300EE681C /* level1.txt */,
+				3D74B180269FBDE300EE681C /* level2.txt */,
 				3DBF0D13269E717700408B21 /* AppDelegate.swift */,
 				3DBF0D15269E717700408B21 /* SceneDelegate.swift */,
 				3DBF0D17269E717700408B21 /* ViewController.swift */,
@@ -124,7 +130,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D74B182269FBDE300EE681C /* level2.txt in Resources */,
 				3DBF0D20269E717800408B21 /* LaunchScreen.storyboard in Resources */,
+				3D74B181269FBDE300EE681C /* level1.txt in Resources */,
 				3DBF0D1D269E717800408B21 /* Assets.xcassets in Resources */,
 				3DBF0D1B269E717700408B21 /* Main.storyboard in Resources */,
 			);
