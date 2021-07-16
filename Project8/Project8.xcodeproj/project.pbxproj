@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D74B181269FBDE300EE681C /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3D74B17F269FBDE300EE681C /* level1.txt */; };
 		3D74B182269FBDE300EE681C /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3D74B180269FBDE300EE681C /* level2.txt */; };
+		3D975ED626A1634700B3504D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D975ED526A1634700B3504D /* Log.swift */; };
 		3DBF0D14269E717700408B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF0D13269E717700408B21 /* AppDelegate.swift */; };
 		3DBF0D16269E717700408B21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF0D15269E717700408B21 /* SceneDelegate.swift */; };
 		3DBF0D18269E717700408B21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF0D17269E717700408B21 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		3D74B17F269FBDE300EE681C /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
 		3D74B180269FBDE300EE681C /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
+		3D975ED526A1634700B3504D /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		3DBF0D10269E717700408B21 /* Project8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DBF0D13269E717700408B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DBF0D15269E717700408B21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				3DBF0D13269E717700408B21 /* AppDelegate.swift */,
 				3DBF0D15269E717700408B21 /* SceneDelegate.swift */,
 				3DBF0D17269E717700408B21 /* ViewController.swift */,
+				3D975ED526A1634700B3504D /* Log.swift */,
 				3DBF0D19269E717700408B21 /* Main.storyboard */,
 				3DBF0D1C269E717800408B21 /* Assets.xcassets */,
 				3DBF0D1E269E717800408B21 /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 			files = (
 				3DBF0D18269E717700408B21 /* ViewController.swift in Sources */,
 				3DBF0D14269E717700408B21 /* AppDelegate.swift in Sources */,
+				3D975ED626A1634700B3504D /* Log.swift in Sources */,
 				3DBF0D16269E717700408B21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
