@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     var activatedButtons = [UIButton]()
     var solutions = [String]()
+    var correctedSolutions = [String]()
     
     var score = 0 {
         didSet {
@@ -118,6 +119,8 @@ class ViewController: UIViewController {
                 let letterButton = UIButton(type: .system)
                 letterButton.titleLabel?.font = .systemFont(ofSize: 36)
                 letterButton.setTitle("WWW", for: .normal)
+                letterButton.layer.borderWidth = 1
+                letterButton.layer.borderColor = UIColor.lightGray.cgColor
                 letterButton.addTarget(self, action: #selector(letterTapped), for: .touchUpInside)
                 let frame = CGRect(x: column * width,
                                    y: row * height,
@@ -148,21 +151,45 @@ class ViewController: UIViewController {
     
     @objc func submitTapped(_ sender: UIButton) {
         guard let answerText = currentAnswer.text else { return }
-        guard let solutionPosition = solutions.firstIndex(of: answerText) else { return }
+        guard let solutionPosition = solutions.firstIndex(of: answerText) else {
+            showIncorrectAlert()
+            clearCurrentInputAnswerAndWordButtonBack()
+            score -= 1
+            return
+        }
         
         activatedButtons.removeAll()
-        
+    
         var splitAnswers = answersLabel.text?.components(separatedBy: "\n")
         splitAnswers?[solutionPosition] = answerText
         answersLabel.text = splitAnswers?.joined(separator: "\n")
         
         currentAnswer.text = ""
         score += 1
+        correctedSolutions.append(answerText)
         
-        if score % 7 == 0 {
+        if correctedSolutions.count == 7 {
             showNextLevelAlert()
         }
+    }
+    
+    func showIncorrectAlert() {
+        let alertController = UIAlertController(
+            title: "Incorrect!!",
+            message: nil,
+            preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss",
+                                                style: .cancel))
         
+        present(alertController, animated: true)
+        
+        
+    }
+    
+    func clearCurrentInputAnswerAndWordButtonBack() {
+        activatedButtons.forEach { $0.isHidden = false }
+        activatedButtons.removeAll()
+        currentAnswer.text = ""
     }
     
     func showNextLevelAlert() {
