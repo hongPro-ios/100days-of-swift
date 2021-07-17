@@ -113,7 +113,8 @@ The next three projects we’ll be building projects where you meet some of the 
  - 20210715 메모: https://www.notion.so/37day-51e3e72cad82484e83bada254cf92ca7
 - [x] ~~Day38 – Project 8, part three~~
  - 20210716 메모: https://www.notion.so/38day-2f4ebed8f3684b39879c6ecf7cc8255d
-- [ ] Day39 – Project 9, part one
+- [x] ~~Day39 – Project 9, part one~~
+ - 20210717 메모: https://www.notion.so/39day-1982a98bb4a640898fd0f0d39c1690fe
 - [ ] Day40 – Project 9, part two
  
 
