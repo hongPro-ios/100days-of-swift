@@ -30,10 +30,10 @@ class ViewController: UITableViewController {
                                                             target: self,
                                                             action: #selector(showCreditsAlert))
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Filter by Code",
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(showFilterAlert))
-
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(showFilterAlert))
+        
         
         let urlString: String
         
@@ -109,11 +109,15 @@ class ViewController: UITableViewController {
         alertController.addAction(UIAlertAction(title: Constants.alertFilterSearch, style: .default, handler: { [weak self] _ in
             guard let text = alertController.textFields?[0].text else { return }
             guard let strongSelf = self else { return }
-            strongSelf.filteredPetitions = strongSelf.petitions.filter { petition in
-                let lowercasedText = text.lowercased()
-                return petition.title.lowercased().contains(lowercasedText)
+            DispatchQueue.global(qos: .userInteractive).async {
+                strongSelf.filteredPetitions = strongSelf.petitions.filter { petition in
+                    let lowercasedText = text.lowercased()
+                    return petition.title.lowercased().contains(lowercasedText)
+                }
+                DispatchQueue.main.async {
+                    strongSelf.tableView.reloadData()
+                }
             }
-            strongSelf.tableView.reloadData()
             
         }))
         alertController.addAction(UIAlertAction(title: Constants.alertFilterDismiss, style: .cancel, handler: nil))
