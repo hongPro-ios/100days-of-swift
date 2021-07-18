@@ -234,12 +234,16 @@ class ViewController: UIViewController {
     }
     
     func levelUp(alertAction: UIAlertAction) {
-        level += 1
-        
-        solutions.removeAll(keepingCapacity: true)
-        letterButtons.forEach { $0.isHidden = false }
-        
-        loadLevel()
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            self?.level += 1
+            
+            self?.solutions.removeAll(keepingCapacity: true)
+            DispatchQueue.main.async {
+                self?.letterButtons.forEach { $0.isHidden = false }
+            }
+            
+            self?.loadLevel()
+        }
     }
     
     func loadLevel() {
@@ -250,9 +254,8 @@ class ViewController: UIViewController {
         
         shuffleClue(levelContents: levelContents)
         shuffleLetterButtons()
-    
     }
-
+    
     func shuffleClue(levelContents: String) {
         var clueString = ""
         var answersString = ""
@@ -275,18 +278,20 @@ class ViewController: UIViewController {
             let answerLetterBits = answerIncludedPipeSymbol.components(separatedBy: "|")
             letterBits += answerLetterBits
         }
-        
-        cluesLabel.text = clueString.trimmingCharacters(in: .whitespacesAndNewlines)
-        answersLabel.text = answersString.trimmingCharacters(in: .whitespacesAndNewlines)
-        
+        DispatchQueue.main.async { [weak self] in
+            self?.cluesLabel.text = clueString.trimmingCharacters(in: .whitespacesAndNewlines)
+            self?.answersLabel.text = answersString.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
     }
     
     func shuffleLetterButtons() {
         letterButtons.shuffle()
-        
+
         if letterButtons.count == letterBits.count {
             for i in 0..<letterButtons.count {
-                letterButtons[i].setTitle(letterBits[i], for: .normal)
+                DispatchQueue.main.async { [weak self] in
+                    self?.letterButtons[i].setTitle(self?.letterBits[i], for: .normal)
+                }
             }
         } else {
             fatalError("level\(level)에 답이되는 word 갯수에 문제가 있다오 딱 20개가 되야 하는데 그걸 만족 못하고있다.")
