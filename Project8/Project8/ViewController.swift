@@ -205,8 +205,8 @@ class ViewController: UIViewController {
     }
     
     func clearCurrentInputAnswerAndActivatedButtonRevert() {
-        clearCurrentInputAnswer()
         activatedButtons.forEach { $0.isHidden = false }
+        clearCurrentInputAnswer()
     }
     
     func showIncorrectAlert() {
