@@ -122,7 +122,8 @@ The next three projects we’ll be building projects where you meet some of the 
 - [ ] Day41: Consolidation IV
 You’ve tackled some really big projects these last few days, not least learning about building a user interface in code and running code in background threads. It’s time to take a moment to review what you’ve learned.
 
-- [ ] Day41 – Milestone: Projects 7-9
+- [x] ~~Day41 – Milestone: Projects 7-9~~
+ - 20210719 메모: https://www.notion.so/41day-94b61e6a3b6049a9b2be1efb9cc97566
  
 
 Days 42-49: A whole new world
