@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D750A5B26A7DE1100631187 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D750A5A26A7DE1000631187 /* Person.swift */; };
 		3DB6DF1626A654F9000D7540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB6DF1526A654F9000D7540 /* AppDelegate.swift */; };
 		3DB6DF1826A654F9000D7540 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB6DF1726A654F9000D7540 /* SceneDelegate.swift */; };
 		3DB6DF1A26A654F9000D7540 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB6DF1926A654F9000D7540 /* CollectionViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D750A5A26A7DE1000631187 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		3DB6DF1226A654F9000D7540 /* Project10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB6DF1526A654F9000D7540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DB6DF1726A654F9000D7540 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				3DB6DF1526A654F9000D7540 /* AppDelegate.swift */,
 				3DB6DF1726A654F9000D7540 /* SceneDelegate.swift */,
 				3DB6DF1926A654F9000D7540 /* CollectionViewController.swift */,
+				3D750A5A26A7DE1000631187 /* Person.swift */,
 				3DB6DF2926A65992000D7540 /* PersonCell.swift */,
 				3DB6DF1B26A654F9000D7540 /* Main.storyboard */,
 				3DB6DF1E26A654FA000D7540 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D750A5B26A7DE1100631187 /* Person.swift in Sources */,
 				3DB6DF1A26A654F9000D7540 /* CollectionViewController.swift in Sources */,
 				3DB6DF1626A654F9000D7540 /* AppDelegate.swift in Sources */,
 				3DB6DF2A26A65992000D7540 /* PersonCell.swift in Sources */,
