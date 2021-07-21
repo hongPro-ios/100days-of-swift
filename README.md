@@ -129,9 +129,10 @@ You’ve tackled some really big projects these last few days, not least learnin
 Days 42-49: A whole new world
 The next three projects we’ll be making are markedly different from the previous 9 – you’ll learn about making grids rather than tables, learn how to make high-performance 2D games using SpriteKit, and, at last, learn how to save user data.
 
-- [x] Day42 – ~~Project 10, part one~~
+- [x] ~~Day42 – Project 10, part one~~
  - 20210720 메모: https://www.notion.so/42day-e492dabdc133480fbd95b8eeb5a6e089
-- [ ] Day43 – Project 10, part two
+- [x] ~~Day43 – Project 10, part two~~
+ - 20210721 메모: https://www.notion.so/43day-e18be8e61ecd4b36b0c9bfd9cdd8e16a
 - [ ] Day44 – Project 10, part three
 - [ ] Day45 – Project 11, part one
 - [ ] Day46 – Project 11, part two
