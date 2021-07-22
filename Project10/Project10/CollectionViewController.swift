@@ -21,6 +21,7 @@ class CollectionViewController: UICollectionViewController {
     @objc func addNewPerson() {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
+        picker.sourceType = .camera
         picker.delegate = self
         present(picker, animated: true)
     }
@@ -70,7 +71,34 @@ extension CollectionViewController: UIImagePickerControllerDelegate, UINavigatio
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let person = people[indexPath.item]
+        showAskingRenameOrDeleteAlert(selectedPerson: person, indexPath: indexPath)
+    
+    }
+    
+    func showAskingRenameOrDeleteAlert(selectedPerson person: Person, indexPath: IndexPath) {
+        let alertController = UIAlertController(title: "What do you want to!",
+                                                message: nil,
+                                                preferredStyle: .alert)
+    
+        alertController.addAction(UIAlertAction(title: "RENAME",
+                                                style: .default,
+                                                handler: { [weak self, weak person] _ in
+                                                    guard let person = person else { return }
+                                                    self?.showRenameAlert(selectedPerson: person)
+                                                }))
+        alertController.addAction(UIAlertAction(title: "DELETE",
+                                                style: .default,
+                                                handler: { [weak self] _ in
+                                                    self?.people.remove(at: indexPath.item)
+                                                    self?.collectionView.reloadData()
+                                                }))
+        alertController.addAction(UIAlertAction(title: "CANCEL",
+                                                style: .cancel))
         
+        present(alertController, animated: true)
+    }
+    
+    func showRenameAlert(selectedPerson person: Person) {
         let alertController = UIAlertController(title: "Rename person",
                                                 message: nil,
                                                 preferredStyle: .alert)
