@@ -21,6 +21,7 @@ class CollectionViewController: UICollectionViewController {
     @objc func addNewPerson() {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
+        picker.sourceType = .camera
         picker.delegate = self
         present(picker, animated: true)
     }
