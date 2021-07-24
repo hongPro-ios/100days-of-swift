@@ -137,7 +137,8 @@ The next three projects we’ll be making are markedly different from the previo
  - 20210722 메모: https://www.notion.so/44day-229c2e09ced7484b89fb32c6d828ce6f
 - [x] ~~Day45 – Project 11, part one~~
  - 20210723 메모: https://www.notion.so/45day-dcc6afc15e7240269854b0bdc707c80b
-- [ ] Day46 – Project 11, part two
+- [x] ~~Day46 – Project 11, part two~~
+ - 20210724 메모: https://www.notion.so/46day-543fab9c161b4f48a9ff7ae0a0d5cab3
 - [ ] Day47 – Project 11, part three
 - [ ] Day48 – Project 12, part one
 - [ ] Day49 – Project 12, part two
