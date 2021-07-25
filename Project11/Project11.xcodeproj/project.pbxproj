@@ -13,6 +13,7 @@
 		3D2DD6AA26AA845E003F13DE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DD6A926AA845E003F13DE /* GameViewController.swift */; };
 		3D2DD6AD26AA845E003F13DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2DD6AB26AA845E003F13DE /* Main.storyboard */; };
 		3D2DD6AF26AA845F003F13DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D2DD6AE26AA845F003F13DE /* Assets.xcassets */; };
+		3D437E0526AD6E2F0019AC50 /* FireParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3D437E0426AD6E2F0019AC50 /* FireParticles.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3D2DD6AC26AA845E003F13DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D2DD6AE26AA845F003F13DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D2DD6B026AA845F003F13DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D437E0426AD6E2F0019AC50 /* FireParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticles.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				3D2DD6A126AA845E003F13DE /* AppDelegate.swift */,
 				3D2DD6A326AA845E003F13DE /* GameScene.sks */,
+				3D437E0426AD6E2F0019AC50 /* FireParticles.sks */,
 				3D2DD6A726AA845E003F13DE /* GameScene.swift */,
 				3D2DD6A926AA845E003F13DE /* GameViewController.swift */,
 				3D2DD6AB26AA845E003F13DE /* Main.storyboard */,
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D2DD6AD26AA845E003F13DE /* Main.storyboard in Resources */,
+				3D437E0526AD6E2F0019AC50 /* FireParticles.sks in Resources */,
 				3D2DD6A426AA845E003F13DE /* GameScene.sks in Resources */,
 				3D2DD6AF26AA845F003F13DE /* Assets.xcassets in Resources */,
 			);
