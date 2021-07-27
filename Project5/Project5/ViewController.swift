@@ -51,6 +51,7 @@ enum ValidationError: Error {
 }
 
 class ViewController: UITableViewController {
+    var givenWord = ""
     var allWords = [String]()
     var usedWords = [String]()
     
@@ -71,7 +72,13 @@ class ViewController: UITableViewController {
         else { return }
         
         allWords = startWords.components(separatedBy: "\n")
-        startGame()
+        
+        loadLatestGame()
+        if givenWord == "" {
+            startGame()
+        } else {
+            continueLatestGame()
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,8 +92,12 @@ class ViewController: UITableViewController {
     }
     
     @objc func startGame() {
-        title = allWords.randomElement()
+        givenWord = allWords.randomElement()!
+        title = givenWord
+        saveGivenWord()
+        
         usedWords.removeAll(keepingCapacity: true)
+        saveUsedWords()
         tableView.reloadData()
     }
     
@@ -95,6 +106,7 @@ class ViewController: UITableViewController {
         
         if validateWord(answer: lowercasedAnswer) {
             usedWords.insert(lowercasedAnswer, at: 0)
+            saveUsedWords()
             
             let indexPath = IndexPath(row: 0, section: 0)
             tableView.insertRows(at: [indexPath], with: .automatic)
@@ -185,6 +197,37 @@ class ViewController: UITableViewController {
             throw ValidationError.sameWithTitle
         }
     }
+    
+    func saveUsedWords() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(usedWords, forKey: "usedWords")
+    }
+    
+    func saveGivenWord() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(givenWord, forKey: "givenWord")
+    }
+    
+    func continueLatestGame() {
+        title = givenWord
+        tableView.reloadData()
+    }
+    
+    func loadLatestGame() {
+        loadGivenWords()
+        loadUsedWords()
+    }
+    
+    func loadUsedWords() {
+        let userDefaults = UserDefaults.standard
+        usedWords = userDefaults.object(forKey: "usedWords") as? [String] ?? [String]()
+    }
+    
+    func loadGivenWords() {
+        let userDefaults = UserDefaults.standard
+        givenWord = userDefaults.object(forKey: "givenWord") as? String ?? ""
+    }
+    
     
 }
 
