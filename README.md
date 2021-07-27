@@ -143,7 +143,8 @@ The next three projects we’ll be making are markedly different from the previo
  - 20210725 메모: https://www.notion.so/47day-b5eeec0499bd4aba9d074993465b8c2f
 - [x] ~~Day48 – Project 12, part one~~
  - 20210726 메모: https://www.notion.so/48day-e51f23664ee3467f85fd1b7ae410ea1c
-- [ ] Day49 – Project 12, part two
+- [x] ~~Day49 – Project 12, part two~~
+ - 20210727 메모: https://www.notion.so/49day-50fea46577964527bb5a25f76cf76aea
  
 
 Days 50-51: Consolidation V
