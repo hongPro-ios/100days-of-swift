@@ -16,12 +16,22 @@ class CollectionViewController: UICollectionViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                            target: self,
                                                            action: #selector(addNewPerson))
+        
+        let defaults = UserDefaults.standard
+        if let savedPeople = defaults.object(forKey: "people") as? Data {
+            let jsonDecoder = JSONDecoder()
+            
+            do {
+                people = try jsonDecoder.decode([Person].self, from: savedPeople)
+            } catch {
+                print("Failed to load people.")
+            }
+        }
     }
     
     @objc func addNewPerson() {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
-        picker.sourceType = .camera
         picker.delegate = self
         present(picker, animated: true)
     }
@@ -59,6 +69,7 @@ extension CollectionViewController: UIImagePickerControllerDelegate, UINavigatio
         
         let person = Person(name: "Unknown", image: imageName)
         people.append(person)
+        save()
         collectionView.reloadData()
         
         dismiss(animated: true)
@@ -90,6 +101,7 @@ extension CollectionViewController: UIImagePickerControllerDelegate, UINavigatio
                                                 style: .default,
                                                 handler: { [weak self] _ in
                                                     self?.people.remove(at: indexPath.item)
+                                                    self?.save()
                                                     self?.collectionView.reloadData()
                                                 }))
         alertController.addAction(UIAlertAction(title: "CANCEL",
@@ -108,11 +120,24 @@ extension CollectionViewController: UIImagePickerControllerDelegate, UINavigatio
                                                 handler: { [weak self, weak alertController] _ in
                                                     guard let newName = alertController?.textFields?[0].text else { return }
                                                     person.name = newName
+                                                    self?.save()
                                                     self?.collectionView.reloadData()
                                                 }))
         alertController.addAction(UIAlertAction(title: "CANCEL",
                                                 style: .cancel))
         
         present(alertController, animated: true)
+    }
+    
+    func save() {
+        let jsonEncoder = JSONEncoder()
+        
+        if let savedData = try? jsonEncoder.encode(people) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: "people")
+        } else {
+            print("Failed to save people.")
+        }
+        
     }
 }
