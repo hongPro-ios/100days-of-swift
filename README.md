@@ -152,7 +152,8 @@ Now that you have conquered UICollectionViewController and Codable, it’s time 
 
 - [x] ~~Day50 – Milestone: Projects 10-12~~
  - 20210728 메모: https://www.notion.so/50day-132251303a364dd0875d912d46ac911a
-- [ ] Day51 – Expanding your horizons
+- [x] Day51 – Expanding your horizons
+ - 20210729 메모: https://www.notion.so/51day-78b8f1a386284194bc6f4a691b798f65
  
 
 Days 52-59: Images and animation
