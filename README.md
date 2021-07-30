@@ -152,14 +152,15 @@ Now that you have conquered UICollectionViewController and Codable, it’s time 
 
 - [x] ~~Day50 – Milestone: Projects 10-12~~
  - 20210728 메모: https://www.notion.so/50day-132251303a364dd0875d912d46ac911a
-- [x] Day51 – Expanding your horizons
+- [x] ~~Day51 – Expanding your horizons~~
  - 20210729 메모: https://www.notion.so/51day-78b8f1a386284194bc6f4a691b798f65
  
 
 Days 52-59: Images and animation
 The next three projects we’ll be making move into the realm of richer user interfaces – you’ll learn about manipulating images using Core Image, animation views, and more.
 
-- [ ] Day52 – Project 13, part one
+- [x] ~~Day52 – Project 13, part one~~
+ - 20210730 메모: https://www.notion.so/52day-77c0e309b719495fa8b19f7e96aa73f4
 - [ ] Day53 – Project 13, part two
 - [ ] Day54 – Project 13, part three
 - [ ] Day55 – Project 14, part one
