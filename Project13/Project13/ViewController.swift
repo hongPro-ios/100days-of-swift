@@ -50,11 +50,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
-        guard let image = imageView.image else { return }
-        UIImageWriteToSavedPhotosAlbum(image,
-                                       self,
-                                       #selector(alertImageSaveCompletion(_:didFinishSavingWithError:contextInfo:)),
-                                       nil)
+        if let image = imageView.image {
+            UIImageWriteToSavedPhotosAlbum(image,
+                                           self,
+                                           #selector(alertImageSaveCompletion(_:didFinishSavingWithError:contextInfo:)),
+                                           nil)
+        } else {
+            let alertController = UIAlertController(title: "Save error", message: "No image", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alertController, animated: true)
+        }
+  
     }
     @IBAction func intensityChanged(_ sender: Any) {
         applyFilterEffect()
