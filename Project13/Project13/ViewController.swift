@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var intensity: UISlider!
+    @IBOutlet var changeFilterButton: UIButton!
     
     var originalImage: UIImage! // 원본 이미지 저장용
     var context: CIContext! // CIFilter적용된 결과 이미지 타입 변환 및 출력용
@@ -70,6 +71,8 @@ class ViewController: UIViewController {
     func setFilter(alertAction: UIAlertAction) {
         guard originalImage != nil else { return }
         guard let actionTitle = alertAction.title else { return }
+        
+        changeFilterButton.setTitle(actionTitle, for: .normal)
         
         currentFilter = CIFilter(name: actionTitle)
         
