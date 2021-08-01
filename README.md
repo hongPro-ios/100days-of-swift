@@ -163,7 +163,8 @@ The next three projects we’ll be making move into the realm of richer user int
  - 20210730 메모: https://www.notion.so/52day-77c0e309b719495fa8b19f7e96aa73f4
 - [x] ~~Day53 – Project 13, part two~~
  - 20210731 메모: https://www.notion.so/53day-9cc13a968b874ae0bf75e2a71c8a980d
-- [ ] Day54 – Project 13, part three
+- [x] ~~Day54 – Project 13, part three~~
+ - 20210801 메모: https://www.notion.so/54day-96d68955564f486c858c8ec6736ceced
 - [ ] Day55 – Project 14, part one
 - [ ] Day56 – Project 14, part two
 - [ ] Day57 – Project 15, part one
