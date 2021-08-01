@@ -69,8 +69,8 @@
                                     <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cFo-A7-X6I"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUj-Ap-TEZ">
-                                <rect key="frame" x="20" y="763" width="47" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="radius:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUj-Ap-TEZ">
+                                <rect key="frame" x="20" y="763" width="51.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="LXq-8q-dGw"/>
                                 </constraints>

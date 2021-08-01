@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet var radius: UISlider!
     @IBOutlet var changeFilterButton: UIButton!
     
-    var originalImage: UIImage! // 원본 이미지 저장용
-    var context: CIContext! // CIFilter적용된 결과 이미지 타입 변환 및 출력용
-    var currentFilter: CIFilter! // 적용 필터
+    private var originalImage: UIImage! // 원본 이미지 저장용
+    private var coreImageContext: CIContext! // CIFilter적용된 결과 이미지 타입 변환 및 출력용
+    private var currentCIFilter: CIFilter! // 적용 필터
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,9 @@ class ViewController: UIViewController {
                                                             target: self,
                                                             action: #selector(importPicture))
         
-        context = CIContext()
-        currentFilter = CIFilter(name: "CISepiaTone")
+        coreImageContext = CIContext()
+        
+        setFilterType(filterTypeString: "CISepiaTone")
     }
     
     @IBAction func changeFilter(_ sender: UIButton) {
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
         filters.forEach {
             alertController.addAction(UIAlertAction(title: $0,
                                                     style: .default,
-                                                    handler: setFilter))
+                                                    handler: changeFilterType))
         }
         alertController.addAction(UIAlertAction(title: "Cancel",
                                                 style: .cancel))
@@ -65,55 +66,69 @@ class ViewController: UIViewController {
   
     }
     @IBAction func intensityChanged(_ sender: Any) {
-        applyFilterEffect()
+        adjustFilterEffectValue()
+        imageView.image = outputUIImageWithFiltered()
     }
     
     @IBAction func radiusChanged(_ sender: UISlider) {
+        adjustFilterEffectValue()
+        imageView.image = outputUIImageWithFiltered()
+    }
+    
+    func changeFilterType(alertAction: UIAlertAction) {
+        guard let filterTypeString = alertAction.title else { return }
+        setFilterType(filterTypeString: filterTypeString)
+    }
+    
+    func setFilterType(filterTypeString: String) {
+        changeFilterButton.setTitle(filterTypeString, for: .normal)
+        
+        currentCIFilter = CIFilter(name: filterTypeString)
+        
         applyFilterEffect()
     }
     
-    func setFilter(alertAction: UIAlertAction) {
-        guard originalImage != nil else { return }
-        guard let actionTitle = alertAction.title else { return }
-        
-        changeFilterButton.setTitle(actionTitle, for: .normal)
-        
-        currentFilter = CIFilter(name: actionTitle)
-        
-        let beginImage = CIImage(image: originalImage)
-        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
-        
-        applyFilterEffect()
-    }
-    
-    
-    func applyFilterEffect() {
-        guard let outputImage = currentFilter.outputImage else { return }
-        let inputKeys = currentFilter.inputKeys
-        
+    func adjustFilterEffectValue() {
+        let inputKeys = currentCIFilter.inputKeys
         if inputKeys.contains(kCIInputIntensityKey) {
-            currentFilter.setValue(intensity.value, forKey: kCIInputIntensityKey)
+            currentCIFilter.setValue(intensity.value, forKey: kCIInputIntensityKey)
         }
         
-        
         if inputKeys.contains(kCIInputRadiusKey) {
-            currentFilter.setValue(radius.value * 200, forKey: kCIInputRadiusKey)
+            currentCIFilter.setValue(radius.value * 200, forKey: kCIInputRadiusKey)
         }
         
         if inputKeys.contains(kCIInputScaleKey) {
-            currentFilter.setValue(intensity.value * 10, forKey: kCIInputScaleKey)
+            currentCIFilter.setValue(intensity.value * 10, forKey: kCIInputScaleKey)
         }
         
         if inputKeys.contains(kCIInputCenterKey) {
-            currentFilter.setValue(CIVector(x: originalImage.size.width / 2 ,
+            currentCIFilter.setValue(CIVector(x: originalImage.size.width / 2 ,
                                             y: originalImage.size.height / 2),
                                    forKey: kCIInputCenterKey)
         }
         
-        if let cgImage = context.createCGImage(outputImage, from: outputImage.extent) {
-            let processedImage = UIImage(cgImage: cgImage)
-            imageView.image = processedImage
-        }
+    }
+    
+    func applyFilterEffect() {
+        guard let originalImage = originalImage else { return }
+        
+        // step1: input original image
+        let targetCIImage = CIImage(image: originalImage)
+        currentCIFilter.setValue(targetCIImage, forKey: kCIInputImageKey)
+        
+        // step2: set filter value
+        adjustFilterEffectValue()
+        
+        // step3: output filtered image
+        imageView.image = outputUIImageWithFiltered()
+    }
+    
+    func outputUIImageWithFiltered() -> UIImage? {
+        guard let outputImage = currentCIFilter.outputImage else { return nil }
+        guard let cgImage = coreImageContext.createCGImage(outputImage, from: outputImage.extent) else { return nil }
+        
+        return UIImage(cgImage: cgImage)
     }
     
     @objc func importPicture() {
@@ -144,8 +159,6 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         dismiss(animated: true)
         originalImage = image
         
-        let targetCIImage = CIImage(image: originalImage)
-        currentFilter.setValue(targetCIImage, forKey: kCIInputImageKey)
         applyFilterEffect()
     }
     
