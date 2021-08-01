@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var intensity: UISlider!
+    @IBOutlet var radius: UISlider!
     @IBOutlet var changeFilterButton: UIButton!
     
     var originalImage: UIImage! // 원본 이미지 저장용
@@ -67,6 +68,9 @@ class ViewController: UIViewController {
         applyFilterEffect()
     }
     
+    @IBAction func radiusChanged(_ sender: UISlider) {
+        applyFilterEffect()
+    }
     
     func setFilter(alertAction: UIAlertAction) {
         guard originalImage != nil else { return }
@@ -91,8 +95,9 @@ class ViewController: UIViewController {
             currentFilter.setValue(intensity.value, forKey: kCIInputIntensityKey)
         }
         
+        
         if inputKeys.contains(kCIInputRadiusKey) {
-            currentFilter.setValue(intensity.value * 200, forKey: kCIInputRadiusKey)
+            currentFilter.setValue(radius.value * 200, forKey: kCIInputRadiusKey)
         }
         
         if inputKeys.contains(kCIInputScaleKey) {
