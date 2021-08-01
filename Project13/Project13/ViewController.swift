@@ -85,7 +85,7 @@ class ViewController: UIViewController {
         
         currentCIFilter = CIFilter(name: filterTypeString)
         
-        applyFilterEffect()
+        imageView.image = applyFilterEffect(to: originalImage)
     }
     
     func adjustFilterEffectValue() {
@@ -110,8 +110,8 @@ class ViewController: UIViewController {
         
     }
     
-    func applyFilterEffect() {
-        guard let originalImage = originalImage else { return }
+    func applyFilterEffect(to originalImage: UIImage?) -> UIImage? {
+        guard let originalImage = originalImage else { return nil }
         
         // step1: input original image
         let targetCIImage = CIImage(image: originalImage)
@@ -121,7 +121,7 @@ class ViewController: UIViewController {
         adjustFilterEffectValue()
         
         // step3: output filtered image
-        imageView.image = outputUIImageWithFiltered()
+        return outputUIImageWithFiltered()
     }
     
     func outputUIImageWithFiltered() -> UIImage? {
@@ -159,7 +159,8 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         dismiss(animated: true)
         originalImage = image
         
-        applyFilterEffect()
+        imageView.image = applyFilterEffect(to: originalImage)
+        
     }
     
 }
