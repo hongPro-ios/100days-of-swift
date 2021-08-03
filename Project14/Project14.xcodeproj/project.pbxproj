@@ -16,6 +16,9 @@
 		3D86034326B78A270020B93F /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3D86034126B78A270020B93F /* whack.caf */; };
 		3D86034426B78A270020B93F /* whackBad.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3D86034226B78A270020B93F /* whackBad.caf */; };
 		3D86034626B78DE80020B93F /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D86034526B78DE80020B93F /* WhackSlot.swift */; };
+		3DE64B4026B92D9B00B8F1E1 /* gameOver.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3DE64B3F26B92D9B00B8F1E1 /* gameOver.m4a */; };
+		3DE64B4326B931A300B8F1E1 /* EmitterSmoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3DE64B4226B931A300B8F1E1 /* EmitterSmoke.sks */; };
+		3DE64B4726B93ACE00B8F1E1 /* SKLabelNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE64B4626B93ACE00B8F1E1 /* SKLabelNodes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		3D86034126B78A270020B93F /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 		3D86034226B78A270020B93F /* whackBad.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whackBad.caf; sourceTree = "<group>"; };
 		3D86034526B78DE80020B93F /* WhackSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
+		3DE64B3F26B92D9B00B8F1E1 /* gameOver.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameOver.m4a; sourceTree = "<group>"; };
+		3DE64B4226B931A300B8F1E1 /* EmitterSmoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EmitterSmoke.sks; sourceTree = "<group>"; };
+		3DE64B4626B93ACE00B8F1E1 /* SKLabelNodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKLabelNodes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +68,29 @@
 		3D86032B26B789330020B93F /* Project14 */ = {
 			isa = PBXGroup;
 			children = (
+				3DE64B4126B92F2A00B8F1E1 /* EffectSounds */,
 				3D86032C26B789330020B93F /* AppDelegate.swift */,
 				3D86033426B789330020B93F /* GameViewController.swift */,
 				3D86032E26B789330020B93F /* GameScene.sks */,
 				3D86033226B789330020B93F /* GameScene.swift */,
+				3DE64B4626B93ACE00B8F1E1 /* SKLabelNodes.swift */,
 				3D86034526B78DE80020B93F /* WhackSlot.swift */,
+				3DE64B4226B931A300B8F1E1 /* EmitterSmoke.sks */,
 				3D86033626B789330020B93F /* Main.storyboard */,
 				3D86033926B789340020B93F /* Assets.xcassets */,
 				3D86033B26B789340020B93F /* Info.plist */,
-				3D86034126B78A270020B93F /* whack.caf */,
-				3D86034226B78A270020B93F /* whackBad.caf */,
 			);
 			path = Project14;
+			sourceTree = "<group>";
+		};
+		3DE64B4126B92F2A00B8F1E1 /* EffectSounds */ = {
+			isa = PBXGroup;
+			children = (
+				3D86034126B78A270020B93F /* whack.caf */,
+				3D86034226B78A270020B93F /* whackBad.caf */,
+				3DE64B3F26B92D9B00B8F1E1 /* gameOver.m4a */,
+			);
+			path = EffectSounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +152,9 @@
 			files = (
 				3D86034426B78A270020B93F /* whackBad.caf in Resources */,
 				3D86033826B789330020B93F /* Main.storyboard in Resources */,
+				3DE64B4326B931A300B8F1E1 /* EmitterSmoke.sks in Resources */,
 				3D86032F26B789330020B93F /* GameScene.sks in Resources */,
+				3DE64B4026B92D9B00B8F1E1 /* gameOver.m4a in Resources */,
 				3D86033A26B789340020B93F /* Assets.xcassets in Resources */,
 				3D86034326B78A270020B93F /* whack.caf in Resources */,
 			);
@@ -149,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D86033326B789330020B93F /* GameScene.swift in Sources */,
+				3DE64B4726B93ACE00B8F1E1 /* SKLabelNodes.swift in Sources */,
 				3D86033526B789330020B93F /* GameViewController.swift in Sources */,
 				3D86034626B78DE80020B93F /* WhackSlot.swift in Sources */,
 				3D86032D26B789330020B93F /* AppDelegate.swift in Sources */,
