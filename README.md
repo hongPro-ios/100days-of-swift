@@ -171,7 +171,8 @@ The next three projects we’ll be making move into the realm of richer user int
  - 20210803 메모: https://www.notion.so/56day-235d0eecd87f4a129df862d8a025f786
 - [x] ~~Day57 – Project 15, part one~~
  - 20210804 메모: https://www.notion.so/CGAffineTransform-9b42c46600ff46c492cd2f4041e6cf0c
-- [ ] Day58 – Project 15, part two
+- [x] ~~Day58 – Project 15, part two~~
+ - 20210805 메모: https://www.notion.so/58day-bf5b327dd7f640139bcee854c28520f6
  
 
 - [ ] Day59: Consolidation VI
