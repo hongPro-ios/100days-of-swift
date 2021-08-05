@@ -169,7 +169,12 @@ class ViewController: UIViewController {
         
         currentAnswer.text = currentAnswer.text?.appending(buttonTitle)
         activatedButtons.append(sender)
-        sender.isHidden = true
+
+        UIView.animate(withDuration: 0.5) {
+            sender.alpha = 0.2
+            sender.isEnabled = false
+        }
+
     }
     
     @objc func submitTapped(_ sender: UIButton) {
@@ -205,7 +210,10 @@ class ViewController: UIViewController {
     }
     
     func clearCurrentInputAnswerAndActivatedButtonRevert() {
-        activatedButtons.forEach { $0.isHidden = false }
+        activatedButtons.forEach {
+            $0.alpha = 1
+            $0.isEnabled = true
+        }
         clearCurrentInputAnswer()
     }
     
