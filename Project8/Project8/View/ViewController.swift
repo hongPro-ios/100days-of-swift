@@ -16,25 +16,9 @@ class ViewController: UIViewController {
     }
     
     var scoreLabel = ScoreLabel()
-    var cluesLabel: UILabel = {
-        let cluesLabel = UILabel()
-        cluesLabel.translatesAutoresizingMaskIntoConstraints = false
-        cluesLabel.font = .systemFont(ofSize: 24)
-        cluesLabel.text = "CLUES"
-        cluesLabel.numberOfLines = 0
-        cluesLabel.setContentHuggingPriority(UILayoutPriority(1), for: .vertical)
-        return cluesLabel
-    }()
-    var answersLabel: UILabel = {
-        let answersLabel = UILabel()
-        answersLabel.translatesAutoresizingMaskIntoConstraints = false
-        answersLabel.font = .systemFont(ofSize: 24)
-        answersLabel.text = "ANSWERS"
-        answersLabel.textAlignment = .right
-        answersLabel.numberOfLines = 0
-        answersLabel.setContentHuggingPriority(UILayoutPriority(1), for: .vertical)
-        return answersLabel
-    }()
+    var cluesLabel = CluesLabel()
+    var answersLabel = AnswersLabel()
+
     var currentAnswer: UITextField = {
         let currentAnswer = UITextField()
         currentAnswer.translatesAutoresizingMaskIntoConstraints = false
@@ -86,7 +70,6 @@ class ViewController: UIViewController {
         
         loadLevel()
     }
-    
     
     func setupUI() {
         view = UIView()
@@ -204,17 +187,17 @@ class ViewController: UIViewController {
         clearCurrentInputAnswerAndActivatedButtonRevert()
     }
     
-    func clearCurrentInputAnswer() {
-        activatedButtons.removeAll()
-        currentAnswer.text = ""
-    }
-    
     func clearCurrentInputAnswerAndActivatedButtonRevert() {
         activatedButtons.forEach {
             $0.alpha = 1
             $0.isEnabled = true
         }
         clearCurrentInputAnswer()
+    }
+    
+    func clearCurrentInputAnswer() {
+        activatedButtons.removeAll()
+        currentAnswer.text = ""
     }
     
     func showIncorrectAlert() {
