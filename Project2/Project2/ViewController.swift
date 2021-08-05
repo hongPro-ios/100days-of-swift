@@ -26,6 +26,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.3,
+                       delay: 0,
+                       usingSpringWithDamping: 0.8,
+                       initialSpringVelocity: 0.8,
+                       options: []) {
+            sender.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        } completion: { finished in
+            UIView.animate(withDuration: 0.2) {
+                sender.transform = .identity
+            }
+        }
+        
         guard countPlay != maxCountPlay else {
             let alertController = UIAlertController(
                 title: "Game Done",
@@ -88,7 +100,6 @@ class ViewController: UIViewController {
         alertScore.addAction(alertCloseAction)
         present(alertScore, animated: true)
     }
-
     
     func resetGame(alertAction: UIAlertAction! = nil) {
         score = 0
@@ -119,6 +130,5 @@ class ViewController: UIViewController {
         }
     }
     
-
 }
 
