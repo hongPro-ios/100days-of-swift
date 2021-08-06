@@ -178,7 +178,8 @@ The next three projects we’ll be making move into the realm of richer user int
 - [ ] Day59: Consolidation VI
 We’ve covered some hugely important iOS technologies that you’ll be relying on time and time again, so let’s take a brief pause to recap what you’ve learned.
 
-- [ ] Day59 – Milestone: Projects 13-15
+- [x] ~~Day59 – Milestone: Projects 13-15~~
+ - 20210806 메모: https://www.notion.so/59day-f220ec61737c4a7b8c1294f39dd103c6
  
 
 Days 60-65: Maps and bugs
