@@ -185,7 +185,8 @@ We’ve covered some hugely important iOS technologies that you’ll be relying 
 Days 60-65: Maps and bugs
 In the next three projects we’ll be edging a little further away from UIKit as we explore MapKit, Apple’s powerful and flexible mapping framework, then we’ll tackle a skill you’re more than ready for: debugging.
 
-- [ ] Day60 – Project 16, part one
+- [x] ~~Day60 – Project 16, part one~~
+ - 20210807 메모: https://www.notion.so/60day-8639147faf9e493db03a963c5686808f
 - [ ] Day61 – Project 16, part two
 - [ ] Day62 – Project 17, part one
 - [ ] Day63 – Project 17, part two
