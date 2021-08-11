@@ -193,7 +193,8 @@ In the next three projects we’ll be edging a little further away from UIKit as
  - 20210809 메모: https://www.notion.so/62day-7fd2831861fe482589bfb94b24c46b04
 - [x] ~~Day63 – Project 17, part two~~
  - 20210810 메모: https://www.notion.so/63day-453a541e59ca44f892b23f44afafe563
-- [ ] Day64 – Project 18, part one
+- [x] ~~Day64 – Project 18, part one~~
+ - 20210811 메모: https://www.notion.so/64day-f82c36f324e74c97b14155104b4f4b26
 - [ ] Day65 – Project 18, part two
  
 
