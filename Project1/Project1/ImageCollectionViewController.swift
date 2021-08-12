@@ -50,7 +50,7 @@ class ImageCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let detailViewController = storyboard?.instantiateViewController(withIdentifier: "Bad") as? DetailViewController else {
+        guard let detailViewController = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController else {
             fatalError()
         }
         detailViewController.selectedImage = pictures[indexPath.item]

@@ -20,7 +20,7 @@ class DetailViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareApp))
-        
+        assert(!(selectedImage == nil), "selectedImage is nil")
         if let imageToLoad = selectedImage {
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
                 let loadedImage = UIImage(named: imageToLoad)
