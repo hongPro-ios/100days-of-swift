@@ -202,7 +202,8 @@ In the next three projects we’ll be edging a little further away from UIKit as
 - [ ] Day66: Consolidation VII
 Although these last few projects should have been nice and easy for you, it’s still worth pausing for a day to review what was learned and try out a fresh challenge.
 
-- [ ] Day66 – Milestone: Projects 16-18
+- [x] ~~Day66 – Milestone: Projects 16-18~~
+ - 20210813 메모: https://www.notion.so/66day-challenge-4b0f2a01386142feb1fd3cb6643f52ee
  
 
 Days 67-73: Leveling up
