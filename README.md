@@ -209,7 +209,8 @@ Although these last few projects should have been nice and easy for you, it’s 
 Days 67-73: Leveling up
 We’re going to tackle two tough projects back to back, but in doing so you’ll start to really be amazed at the things you can build on iOS – brace yourself!
 
-- [ ] Day67 – Project 19, part one
+- [x] ~~Day67 – Project 19, part one~~
+ - 20210814 메모: https://www.notion.so/67day-33a3006dd0b240cea4e5aa9da03445b5
 - [ ] Day68 – Project 19, part two
 - [ ] Day69 – Project 19, part three
 - [ ] Day70 – Project 20, part one
