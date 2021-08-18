@@ -217,7 +217,8 @@ We’re going to tackle two tough projects back to back, but in doing so you’l
  - 20210816 메모: https://www.notion.so/69day-a364b70ccfd244fb81cfbf31a340bb5c
 - [x] ~~Day70 – Project 20, part one~~
  - 20210817 메모: https://www.notion.so/70day-572215dda6e342b2b32a4f03123acf73
-- [ ] Day71 – Project 20, part two
+- [x] ~~Day71 – Project 20, part two~~
+ - 20210818 메모: https://www.notion.so/71day-a7f428bb525d4b20b584e2d188025976
 - [ ] Day72 – Project 21, part one
 - [ ] Day73 – Project 21, part two
  
