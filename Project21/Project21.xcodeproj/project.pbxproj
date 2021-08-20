@@ -13,6 +13,7 @@
 		3D11C74826CE765100312502 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D11C74626CE765100312502 /* Main.storyboard */; };
 		3D11C74A26CE765200312502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D11C74926CE765200312502 /* Assets.xcassets */; };
 		3D11C74D26CE765200312502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D11C74B26CE765200312502 /* LaunchScreen.storyboard */; };
+		3D5BE78F26CFDA3B00860FA2 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5BE78E26CFDA3B00860FA2 /* AlertBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3D11C74926CE765200312502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D11C74C26CE765200312502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D11C74E26CE765200312502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D5BE78E26CFDA3B00860FA2 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3D11C74926CE765200312502 /* Assets.xcassets */,
 				3D11C74B26CE765200312502 /* LaunchScreen.storyboard */,
 				3D11C74E26CE765200312502 /* Info.plist */,
+				3D5BE78E26CFDA3B00860FA2 /* AlertBuilder.swift */,
 			);
 			path = Project21;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5BE78F26CFDA3B00860FA2 /* AlertBuilder.swift in Sources */,
 				3D11C74526CE765100312502 /* ViewController.swift in Sources */,
 				3D11C74126CE765100312502 /* AppDelegate.swift in Sources */,
 				3D11C74326CE765100312502 /* SceneDelegate.swift in Sources */,
