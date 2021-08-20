@@ -61,14 +61,14 @@ class ViewController: UIViewController {
         center.delegate = self
         
         let foreground = UNNotificationAction(identifier: "foreground",
-                                        title: "foreground action",
-                                        options: .foreground)
+                                              title: "foreground action",
+                                              options: .foreground)
         let destructive = UNNotificationAction(identifier: "destructive",
-                                        title: "destructive action",
-                                        options: .destructive)
+                                               title: "destructive action",
+                                               options: .destructive)
         let authenticationRequired = UNNotificationAction(identifier: "authenticationRequired",
-                                        title: "authenticationRequired action",
-                                        options: .authenticationRequired)
+                                                          title: "authenticationRequired action",
+                                                          options: .authenticationRequired)
         
         //identifier를 UNMutableNotificationContent의 categoryIdentifier와 값을 맞춰줘야 하다.
         let category = UNNotificationCategory(identifier: "alarm",
@@ -87,24 +87,29 @@ extension ViewController: UNUserNotificationCenterDelegate {
         
         if let customData = userInfo["customData"] as? String {
             print("Custom data received: \(customData)")
-            
-            switch response.actionIdentifier {
-            // the user swiped to unlock
-            case UNNotificationDefaultActionIdentifier:
-                print("Default identifier")
-            // user tapped foreground button
-            case "foreground":
-                print("did tap foreground")
-            // user tapped destructive button
-            case "destructive":
-                print("did tap destructive")
-            // user tapped authenticationRequired button
-            case "authenticationRequired":
-                print("did tap authenticationRequired")
-            default:
-                break
-            }
         }
+        
+        var alertController = UIAlertController()
+        
+        switch response.actionIdentifier {
+        // the user swiped to unlock
+        case UNNotificationDefaultActionIdentifier:
+            alertController = AlertBuilder.simpleAlert(title: "Default identifier")
+        // user tapped foreground button
+        case "foreground":
+            alertController = AlertBuilder.simpleAlert(title: "foreground")
+        // user tapped destructive button
+        case "destructive":
+            alertController = AlertBuilder.simpleAlert(title: "destructive")
+        // user tapped authenticationRequired button
+        case "authenticationRequired":
+            alertController = AlertBuilder.simpleAlert(title: "authenticationRequired")
+        default:
+            break
+        }
+        
+        present(alertController, animated: true)
+        
         // you must call the completion handler when you're done
         completionHandler()
     }
