@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @objc func scheduleLocal() {
+    @objc func scheduleLocal(isReminder: Bool = false) {
         registerCategories()
         
         let center = UNUserNotificationCenter.current()
@@ -41,8 +41,9 @@ class ViewController: UIViewController {
         content.categoryIdentifier = "alarm"
         content.userInfo = ["customData": "fizzbuzz"]
         content.sound = .default
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+
+        let timeInterval: Double = isReminder ? 86400 : 2
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
         
         //        var dateComponents = DateComponents()
         //        dateComponents.hour = 10
@@ -69,10 +70,14 @@ class ViewController: UIViewController {
         let authenticationRequired = UNNotificationAction(identifier: "authenticationRequired",
                                                           title: "authenticationRequired action",
                                                           options: .authenticationRequired)
+        let remindAction = UNNotificationAction(identifier: "remind",
+                                                title: "Remind me later",
+                                                options: .destructive)
+        
         
         //identifier를 UNMutableNotificationContent의 categoryIdentifier와 값을 맞춰줘야 하다.
         let category = UNNotificationCategory(identifier: "alarm",
-                                              actions: [foreground, destructive, authenticationRequired],
+                                              actions: [foreground, destructive, authenticationRequired, remindAction],
                                               intentIdentifiers: [],
                                               options: [])
         center.setNotificationCategories([category])
@@ -89,7 +94,7 @@ extension ViewController: UNUserNotificationCenterDelegate {
             print("Custom data received: \(customData)")
         }
         
-        var alertController = UIAlertController()
+        var alertController = UIAlertController(title: "init", message: nil, preferredStyle: .alert)
         
         switch response.actionIdentifier {
         // the user swiped to unlock
@@ -104,6 +109,9 @@ extension ViewController: UNUserNotificationCenterDelegate {
         // user tapped authenticationRequired button
         case "authenticationRequired":
             alertController = AlertBuilder.simpleAlert(title: "authenticationRequired")
+        case "remind":
+            alertController = AlertBuilder.simpleAlert(title: "remind")
+            scheduleLocal(isReminder: true)
         default:
             break
         }
