@@ -1,0 +1,40 @@
+[
+    {
+        "id": "folderId1",
+        "title": "folderTitle1",
+        "notes": [
+            {
+                "id": "noteId11",
+                "title": "noteTitle1",
+                "context": "noteContext1"
+            },
+            {
+                "id": "noteId12",
+                "title": "noteTitle2",
+                "context": "noteContext2"
+            },
+            {
+                "id": "noteId13",
+                "title": "noteTitle3",
+                "context": "noteContext3"
+            }
+        ]
+    },
+    {
+        "id": "folderId2",
+        "title": "folderTitle2",
+        "notes": [
+            {
+                "id": "noteId21",
+                "title": "noteTitle21",
+                "context": "noteContext21"
+            }
+        ]
+    },
+    {
+        "id": "folderId3",
+        "title": "folderTitle3",
+        "notes": []
+    }
+]
+ 
