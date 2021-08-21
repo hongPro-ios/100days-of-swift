@@ -228,8 +228,8 @@ We’re going to tackle two tough projects back to back, but in doing so you’l
 - [ ] Day74: Consolidation VIII
 After two tough projects and yet another important technique, it’s time to hit the brakes for a day and double check everything is sinking in.
 
-- [ ] Day74 – Milestone: Projects 19-21
- 
+- [x] ~~Day74 – Milestone: Projects 19-21~~
+ - 20210821 메모: https://www.notion.so/74day-7bdf710ed6274055b7b594114a58233e
 
 Days 75-81: Beacons and bombs
 These next three projects will start to show you just how much you’re now able to build with iOS – your skills are really starting to flourish!
