@@ -234,7 +234,8 @@ After two tough projects and yet another important technique, it’s time to hit
 Days 75-81: Beacons and bombs
 These next three projects will start to show you just how much you’re now able to build with iOS – your skills are really starting to flourish!
 
-- [ ] Day75 – Project 22, part one
+- [x] ~~Day75 – Project 22, part one~~
+ - 20210822 메모: https://www.notion.so/75day-a6d6ce3136124f1192a29503d8669e04
 - [ ] Day76 – Project 22, part two
 - [ ] Day77 – Project 23, part one
 - [ ] Day78 – Project 23, part two
