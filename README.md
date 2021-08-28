@@ -246,7 +246,8 @@ These next three projects will start to show you just how much you’re now able
  - 20210826 메모: https://www.notion.so/79day-4aef951c9e434c5cba1129b310ad1613
 - [x] ~~Day80 – Project 24, part one~~
  - 20210827 메모: https://www.notion.so/80day-8bc8825f35c24aaca0334be047afd936
-- [ ] Day81 – Project 24, part two
+- [x] ~~Day81 – Project 24, part two~~
+ - 20210828 메모: https://www.notion.so/81day-4f7835ba748f48ebbef9cd56b87568f8
  
 
 - [ ] Day82: Consolidation IX
