@@ -253,7 +253,8 @@ These next three projects will start to show you just how much you’re now able
 - [ ] Day82: Consolidation IX
 Your head is probably spinning with Bezier paths and iBeacons, so before we continue on with more learning it’s important to take a day to pause and reflect on what has been covered.
 
-- [ ] Day82 – Milestone: Projects 22-24
+- [x] ~~Day82 – Milestone: Projects 22-24~~
+ - 20210829 메모: https://www.notion.so/82day-61269f5d9b6f4b4c89e689246f518927
  
 
 Days 83-89: Multipeer and motion
