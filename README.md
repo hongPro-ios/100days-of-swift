@@ -260,7 +260,8 @@ Your head is probably spinning with Bezier paths and iBeacons, so before we cont
 Days 83-89: Multipeer and motion
 These next three projects give you chance to go over some earlier topics again, while also introducing some new frameworks such as MultipeerConnectivity and Core Motion.
 
-- [ ] Day83 – Project 25, part one
+- [x] ~~Day83 – Project 25, part one~~
+ - 20210901 메모: https://www.notion.so/83day-aa91e1fcd70342baa7a733f0bda55ef8
 - [ ] Day84 – Project 25, part two
 - [ ] Day85 – Project 26, part one
 - [ ] Day86 – Project 26, part two
