@@ -55,6 +55,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>use for MCNearbyServiceAdvertiser</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_hws-project25._tcp</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
