@@ -52,6 +52,7 @@ class ViewController: UICollectionViewController {
         let alertController = UIAlertController(title: "Connect to others", message: nil, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Host a session", style: .default, handler: startHosting))
         alertController.addAction(UIAlertAction(title: "Join a session", style: .default, handler: joinSession))
+        alertController.addAction(UIAlertAction(title: "Disconnect a session", style: .default, handler: disconnectSession))
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(alertController, animated: true)
     }
@@ -68,6 +69,11 @@ class ViewController: UICollectionViewController {
                                                 session: mcSession)
         mcBrowser.delegate = self
         present(mcBrowser, animated: true)
+    }
+    
+    func disconnectSession(action: UIAlertAction) {
+        guard let mcSession = mcSession else { return }
+        mcSession.disconnect()
     }
     
 }
