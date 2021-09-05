@@ -14,6 +14,8 @@
 		3D6CABCE26E2524100EBC292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D6CABCC26E2524100EBC292 /* Main.storyboard */; };
 		3D6CABD026E2524200EBC292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6CABCF26E2524200EBC292 /* Assets.xcassets */; };
 		3D6CABD826E252C100EBC292 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3D6CABD726E252C100EBC292 /* level1.txt */; };
+		3DE3786126E5654E0039AA56 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3786026E5654E0039AA56 /* Nodes.swift */; };
+		3DE3786326E56CB10039AA56 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3DE3786226E56CB10039AA56 /* level2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3D6CABCF26E2524200EBC292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D6CABD126E2524200EBC292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D6CABD726E252C100EBC292 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		3DE3786026E5654E0039AA56 /* Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nodes.swift; sourceTree = "<group>"; };
+		3DE3786226E56CB10039AA56 /* level2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				3D6CABCF26E2524200EBC292 /* Assets.xcassets */,
 				3D6CABD126E2524200EBC292 /* Info.plist */,
 				3D6CABD726E252C100EBC292 /* level1.txt */,
+				3DE3786226E56CB10039AA56 /* level2.txt */,
+				3DE3786026E5654E0039AA56 /* Nodes.swift */,
 			);
 			path = Project26;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE3786326E56CB10039AA56 /* level2.txt in Resources */,
 				3D6CABCE26E2524100EBC292 /* Main.storyboard in Resources */,
 				3D6CABD826E252C100EBC292 /* level1.txt in Resources */,
 				3D6CABC526E2524100EBC292 /* GameScene.sks in Resources */,
@@ -144,6 +151,7 @@
 				3D6CABC926E2524100EBC292 /* GameScene.swift in Sources */,
 				3D6CABCB26E2524100EBC292 /* GameViewController.swift in Sources */,
 				3D6CABC326E2524100EBC292 /* AppDelegate.swift in Sources */,
+				3DE3786126E5654E0039AA56 /* Nodes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
