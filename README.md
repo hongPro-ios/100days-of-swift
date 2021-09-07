@@ -270,7 +270,8 @@ These next three projects give you chance to go over some earlier topics again, 
  - 20210805 메모: https://www.notion.so/86day-b8daf1c5a0a447559b969298d16b60b4
 - [x] ~~Day87 – Project 26, part three~~
  - 20210806 메모: https://www.notion.so/SKSpriteNode-701402eceff549048ef2b7bdc4f3c2d5
-- [ ] Day88 – Project 27, part one
+- [x] ~~Day88 – Project 27, part one~~
+ - 20210807 메모: https://www.notion.so/88day-8676f09093324658870e311cd6e092f0
 - [ ] Day89 – Project 27, part two
  
 
