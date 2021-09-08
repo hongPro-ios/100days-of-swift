@@ -10,19 +10,18 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
-    var currentDrawType = 0
+    var currentDrawType = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        drawRectangle()
+        drawWordWithLine()
         
     }
-    
     
     @IBAction func redrawTapped(_ sender: Any) {
         currentDrawType += 1
         
-        if currentDrawType > 5 {
+        if currentDrawType > 7 {
             currentDrawType = 0
         }
         
@@ -39,6 +38,10 @@ class ViewController: UIViewController {
             drawLine()
         case 5:
             drawImagesAndText()
+        case 6:
+            drawEmoji()
+        case 7:
+            drawWordWithLine()
         default:
             break
         }
@@ -67,12 +70,12 @@ class ViewController: UIViewController {
         
         let image = renderer.image { ctx in
             let rectangle = CGRect(x: 0, y: 0, width: 512, height: 512).insetBy(dx: 5, dy: 5)
-            ctx.cgContext.setFillColor(UIColor.red.cgColor)
-            ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
+            //            ctx.cgContext.setFillColor(UIColor.red.cgColor)
+            //            ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
             ctx.cgContext.setLineWidth(10)
             
             ctx.cgContext.addEllipse(in: rectangle)
-            ctx.cgContext.drawPath(using: .fillStroke)
+            //            ctx.cgContext.drawPath(using: .fillStroke)
         }
         
         imageView.image = image
@@ -104,7 +107,7 @@ class ViewController: UIViewController {
             
             let rotations = 16
             let amount = Double.pi / Double(rotations)
-    
+            
             
             for _ in 0 ..< rotations {
                 ctx.cgContext.rotate(by: CGFloat(amount))
@@ -117,7 +120,6 @@ class ViewController: UIViewController {
         
         imageView.image = image
     }
-    
     
     func drawLine() {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
@@ -167,12 +169,92 @@ class ViewController: UIViewController {
             
             let mouse = UIImage(named: "mouse")
             mouse?.draw(at: CGPoint(x: 300, y: 150))
-
+            
         }
         
         imageView.image = image
         
     }
     
+    func drawEmoji() {
+        let render = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        let image = render.image { ctx in
+            
+            ctx.cgContext.addEllipse(in: CGRect(x: 0, y: 0, width: 512, height: 512))
+            ctx.cgContext.translateBy(x: 256, y: 256)
+            ctx.cgContext.setFillColor(UIColor.yellow.cgColor)
+            ctx.cgContext.drawPath(using: .fillStroke)
+            
+            ctx.cgContext.addEllipse(in: CGRect(x: -125 - 50, y: -125, width: 100, height: 100))
+            ctx.cgContext.translateBy(x: 50, y: 50)
+            ctx.cgContext.setFillColor(UIColor.white.cgColor)
+            ctx.cgContext.drawPath(using: .fillStroke)
+            
+            ctx.cgContext.addEllipse(in: CGRect(x: -125 - 50, y: -125, width: 20, height: 20))
+            ctx.cgContext.translateBy(x: -50, y: -50)
+            ctx.cgContext.setFillColor(UIColor.black.cgColor)
+            ctx.cgContext.drawPath(using: .fillStroke)
+            
+            ctx.cgContext.addEllipse(in: CGRect(x: 125 - 50, y: -125, width: 100, height: 100))
+            ctx.cgContext.translateBy(x: 25, y: 50)
+            ctx.cgContext.setFillColor(UIColor.white.cgColor)
+            ctx.cgContext.drawPath(using: .fillStroke)
+            
+            ctx.cgContext.addEllipse(in: CGRect(x: 125 - 50, y: -125, width: 20, height: 20))
+            ctx.cgContext.translateBy(x: -25, y: -50)
+            ctx.cgContext.setFillColor(UIColor.black.cgColor)
+            ctx.cgContext.drawPath(using: .fillStroke)
+            
+            ctx.cgContext.addEllipse(in: CGRect(x: 0 - 100, y: 50, width: 200, height: 200))
+            ctx.cgContext.setFillColor(UIColor.red.cgColor)
+            ctx.cgContext.drawPath(using: .fillStroke)
+            
+            ctx.cgContext.addEllipse(in: CGRect(x: -50, y: 150, width: 100, height: 100))
+            ctx.cgContext.setFillColor(UIColor.systemPink.cgColor)
+            ctx.cgContext.drawPath(using: .fillStroke)
+        }
+        
+        imageView.image = image
+    }
+    
+    func drawWordWithLine() {
+        let render = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        let image = render.image { ctx in
+            
+            // T
+            ctx.cgContext.translateBy(x: 100, y: 200)
+            ctx.cgContext.move(to: CGPoint(x: 0, y: 0))
+            ctx.cgContext.addLine(to: CGPoint(x: 100, y: 0))
+            ctx.cgContext.strokePath()
+            ctx.cgContext.move(to: CGPoint(x: 55, y: 0))
+            ctx.cgContext.addLine(to: CGPoint(x: 55, y: 100))
+            ctx.cgContext.strokePath()
+            
+            // W
+            ctx.cgContext.translateBy(x: 110, y: 0)
+            ctx.cgContext.move(to: CGPoint(x: 0, y: 0))
+            ctx.cgContext.addLine(to: CGPoint(x: 33, y: 100))
+            ctx.cgContext.addLine(to: CGPoint(x: 50, y: 0))
+            ctx.cgContext.addLine(to: CGPoint(x: 66, y: 100))
+            ctx.cgContext.addLine(to: CGPoint(x: 100, y: 0))
+            ctx.cgContext.strokePath()
+            
+            // I
+            ctx.cgContext.translateBy(x: 110, y: 0)
+            ctx.cgContext.move(to: CGPoint(x: 50, y: 0))
+            ctx.cgContext.addLine(to: CGPoint(x: 50, y: 100))
+            ctx.cgContext.strokePath()
+    
+            // N
+            ctx.cgContext.translateBy(x: 80, y: 0)
+            ctx.cgContext.move(to: CGPoint(x: 0, y: 100))
+            ctx.cgContext.addLine(to: CGPoint(x: 0, y: 0))
+            ctx.cgContext.addLine(to: CGPoint(x: 100, y: 100))
+            ctx.cgContext.addLine(to: CGPoint(x: 100, y: 0))
+            ctx.cgContext.strokePath()
+        }
+        
+        imageView.image = image
+    }
 }
 
