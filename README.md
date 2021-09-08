@@ -272,7 +272,8 @@ These next three projects give you chance to go over some earlier topics again, 
  - 20210806 메모: https://www.notion.so/SKSpriteNode-701402eceff549048ef2b7bdc4f3c2d5
 - [x] ~~Day88 – Project 27, part one~~
  - 20210807 메모: https://www.notion.so/88day-8676f09093324658870e311cd6e092f0
-- [ ] Day89 – Project 27, part two
+- [x] ~~Day89 – Project 27, part two~~
+ - 20210808 메모: https://www.notion.so/89day-e9e85980582d420789608e9000ea50b7
  
 
 Days 90-91: Consolidation X
