@@ -279,7 +279,8 @@ These next three projects give you chance to go over some earlier topics again, 
 Days 90-91: Consolidation X
 As we enter the last few days of this challenge, it’s as important as ever to pause for a moment and review what you’ve learned these last few days.
 
-- [ ] Day90 – Milestone: Projects 25-27
+- [x] ~~Day90 – Milestone: Projects 25-27~~
+ - 20210909 메모: https://www.notion.so/90day-5aeec981706048aead4d1c1c0ee6abfb
 - [ ] Day91 – Core Graphics redux
  
 
