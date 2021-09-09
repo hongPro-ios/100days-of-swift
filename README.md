@@ -282,6 +282,7 @@ As we enter the last few days of this challenge, it’s as important as ever to 
 - [x] ~~Day90 – Milestone: Projects 25-27~~
  - 20210909 메모: https://www.notion.so/90day-5aeec981706048aead4d1c1c0ee6abfb
 - [ ] Day91 – Core Graphics redux
+ - 20210910 메모: https://www.notion.so/91day-cd638644b9ae41449e6074cfc7dc2e95
  
 
 Days 92-98: The Final Countdown
