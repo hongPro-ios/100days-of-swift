@@ -288,7 +288,8 @@ As we enter the last few days of this challenge, it’s as important as ever to 
 Days 92-98: The Final Countdown
 These final three projects introduce you to some key functionality that will really help you up your game: using Face ID, mixing UIKit and SpriteKit, and identifying performance hotspots in your code.
 
-- [ ] Day92 – Project 28, part one
+- [x] Day92 – Project 28, part one
+ - 20210911 메모: https://www.notion.so/92day-3e03a339a2f147a694917dd5de9ad0d1
 - [ ] Day93 – Project 28, part two
 - [ ] Day94 – Project 29, part one
 - [ ] Day95 – Project 29, part two
