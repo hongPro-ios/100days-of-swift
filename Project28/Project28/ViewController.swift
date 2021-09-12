@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var textView: UITextView!
+    let password = "1234"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +39,12 @@ class ViewController: UIViewController {
                         self?.unlockSecretMessage()
                     } else {
                         // error
-                        let ac = UIAlertController(title: "Authentication failed", message: "You could not be verified; please try again.", preferredStyle: .alert)
-                        ac.addAction(UIAlertAction(title: "OK", style: .default))
+                        let ac = UIAlertController(title: "Enter password", message: nil, preferredStyle: .alert)
+                        ac.addTextField(configurationHandler: nil)
+                        ac.addAction(UIAlertAction(title: "OK", style: .default) { [weak ac] _ in
+                            guard let password = ac?.textFields?[0].text else { return }
+                            self?.submit(password)
+                        })
                         self?.present(ac, animated: true)
                     }
                 }
@@ -52,6 +57,20 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    func submit(_ answer: String) {
+        let lowercasedAnswer = answer.lowercased()
+        
+        if lowercasedAnswer == password {
+            unlockSecretMessage()
+        } else {
+            
+            let ac = UIAlertController(title: "Authentication failed", message: "You could not be verified; please try again.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
+    
     
     @objc func adjustForKeyboard(notification: Notification) {
         guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
