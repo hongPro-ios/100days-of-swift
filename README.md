@@ -281,19 +281,21 @@ As we enter the last few days of this challenge, it’s as important as ever to 
 
 - [x] ~~Day90 – Milestone: Projects 25-27~~
  - 20210909 메모: https://www.notion.so/90day-5aeec981706048aead4d1c1c0ee6abfb
-- [ ] Day91 – Core Graphics redux
+- [x] ~~Day91 – Core Graphics redux~~
  - 20210910 메모: https://www.notion.so/91day-cd638644b9ae41449e6074cfc7dc2e95
  
 
 Days 92-98: The Final Countdown
 These final three projects introduce you to some key functionality that will really help you up your game: using Face ID, mixing UIKit and SpriteKit, and identifying performance hotspots in your code.
 
-- [x] Day92 – Project 28, part one
+- [x] ~~Day92 – Project 28, part one~~
  - 20210911 메모: https://www.notion.so/92day-3e03a339a2f147a694917dd5de9ad0d1
-- [x] Day93 – Project 28, part two
+- [x] ~~Day93 – Project 28, part two~~
  - 20210912 메모: https://www.notion.so/93day-952309af35ff46628c75046826723f05
-- [ ] Day94 – Project 29, part one
-- [ ] Day95 – Project 29, part two
+- [x] ~~Day94 – Project 29, part one~~
+ - 20210913 메모: https://www.notion.so/94day-ade9eb69c4364ad0a3cf1c9cace5e65b
+- [x] ~~Day95 – Project 29, part two~~
+ - 20210916 https://www.notion.so/95day-e85edb349555479d9c3ea951f7509bb6
 - [ ] Day96 – Project 29, part three
 - [ ] Day97 – Project 30, part one
 - [ ] Day98 – Project 30, part two
