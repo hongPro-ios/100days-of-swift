@@ -67,4 +67,25 @@ class BuildingNode: SKSpriteNode {
         physicsBody?.categoryBitMask = CollisionTypes.building.rawValue
         physicsBody?.contactTestBitMask = CollisionTypes.banana.rawValue
     }
+    
+    func hit(at point: CGPoint) {
+        let convertedPoint = CGPoint(x: point.x + size.width / 2,
+                                     y: abs(point.y - (size.height / 2)))
+        
+        let render = UIGraphicsImageRenderer(size: size)
+        let img = render.image { ctx in
+            currentImage.draw(at: .zero)
+            
+            ctx.cgContext.addEllipse(in: CGRect(x: convertedPoint.x - 32,
+                                                y: convertedPoint.y - 32,
+                                                width: 64,
+                                                height: 64))
+            ctx.cgContext.setBlendMode(.clear)
+            ctx.cgContext.drawPath(using: .fill)
+        }
+        
+        texture = SKTexture(image: img)
+        currentImage = img
+        configurePhysics()
+    }
 }
