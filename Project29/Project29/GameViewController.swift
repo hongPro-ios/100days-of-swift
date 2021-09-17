@@ -19,6 +19,21 @@ class GameViewController: UIViewController {
     @IBOutlet var angleLabel: UILabel!
     @IBOutlet var angleSlider: UISlider!
     
+    @IBOutlet var player1ScoreLabel: UILabel!
+    @IBOutlet var player2ScoreLabel: UILabel!
+    
+    var score1: Int = 0 {
+        didSet {
+            player1ScoreLabel.text = "Player1 Score : \(score1)"
+        }
+    }
+    var score2: Int = 0 {
+        didSet {
+            player2ScoreLabel.text = "Player2 Score : \(score2)"
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -98,6 +113,17 @@ class GameViewController: UIViewController {
         
         launchButton.isHidden = false
 
+    }
+    
+    func endGame() {
+        angleSlider.isHidden = true
+        angleLabel.isHidden = true
+        
+        velocityLabel.isHidden = true
+        velocitySlider.isHidden = true
+        
+        launchButton.isHidden = true
+        playerNumber.isHidden = true
     }
     
 }

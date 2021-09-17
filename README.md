@@ -295,8 +295,9 @@ These final three projects introduce you to some key functionality that will rea
 - [x] ~~Day94 – Project 29, part one~~
  - 20210913 메모: https://www.notion.so/94day-ade9eb69c4364ad0a3cf1c9cace5e65b
 - [x] ~~Day95 – Project 29, part two~~
- - 20210916 https://www.notion.so/95day-e85edb349555479d9c3ea951f7509bb6
-- [ ] Day96 – Project 29, part three
+ - 20210916 메모: https://www.notion.so/95day-e85edb349555479d9c3ea951f7509bb6
+- [x] ~~Day96 – Project 29, part three~~
+ - 20210917 메모: https://www.notion.so/96day-dfc001ca25364444972a3917a4f7adb0
 - [ ] Day97 – Project 30, part one
 - [ ] Day98 – Project 30, part two
  
