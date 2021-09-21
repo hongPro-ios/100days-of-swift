@@ -10,7 +10,6 @@ import UIKit
 
 class SelectionViewController: UITableViewController {
 	var items = [String]() // this is the array that will store the filenames to load
-	var viewControllers = [UIViewController]() // create a cache of the detail view controllers for faster loading
 	var dirty = false
 
     override func viewDidLoad() {
@@ -32,7 +31,60 @@ class SelectionViewController: UITableViewController {
 				}
 			}
 		}
+        
+        let fileManager = FileManager.default
+
+        makeImageForCell()
+
+        
+        let aaa = try! fileManager.contentsOfDirectory(atPath: getDocumentsDirectory().path)
+        // option
+        for item in aaa {
+            print(item)
+        }
+
     }
+    
+    func makeImageForCell() {
+        for imageName in items {
+            let imageThumbName = imageName.replacingOccurrences(of: "Large", with: "Thumb")
+        
+            guard !FileManager.default.fileExists(atPath: getDocumentsDirectory().appendingPathComponent("\(imageThumbName)").path)
+            else { continue }
+            
+            
+            guard let path = Bundle.main.path(forResource: imageThumbName, ofType: nil),
+                  let originalImage = UIImage(contentsOfFile: path)
+            else { return }
+            
+            
+            let renderRect = CGRect(origin: .zero, size: CGSize(width: 90, height: 90))
+            let renderer = UIGraphicsImageRenderer(size: renderRect.size)
+            
+            let image = renderer.image { ctx in
+                ctx.cgContext.addEllipse(in: CGRect(origin: CGPoint.zero, size: renderRect.size))
+                ctx.cgContext.clip()
+                
+                originalImage.draw(in: renderRect)
+            }
+    
+            saveImageOnDocumentDirectory(image: image, imageName: imageThumbName)
+        }
+    }
+    
+    func saveImageOnDocumentDirectory(image: UIImage, imageName: String) {
+        if let data = image.jpegData(compressionQuality: 1) {
+            let filename = getDocumentsDirectory().appendingPathComponent("\(imageName)")
+            try? data.write(to: filename)
+        }
+    }
+    
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
@@ -59,14 +111,12 @@ class SelectionViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-
 		// find the image for this cell, and load its thumbnail
 		let currentImage = items[indexPath.row % items.count]
 		let imageRootName = currentImage.replacingOccurrences(of: "Large", with: "Thumb")
-		let path = Bundle.main.path(forResource: imageRootName, ofType: nil)!
-		let originalImage = UIImage(contentsOfFile: path)!
-
-		
+        
+        let data = try! Data(contentsOf: getDocumentsDirectory().appendingPathComponent("\(imageRootName)"))
+        let image = UIImage(data: data) ?? UIImage()
         let renderRect = CGRect(origin: .zero, size: CGSize(width: 90, height: 90))
         let renderer = UIGraphicsImageRenderer(size: renderRect.size)
 
@@ -74,7 +124,7 @@ class SelectionViewController: UITableViewController {
 			ctx.cgContext.addEllipse(in: CGRect(origin: CGPoint.zero, size: renderRect.size))
 			ctx.cgContext.clip()
 
-            originalImage.draw(in: renderRect)
+            image.draw(in: renderRect)
 		}
 
 		cell.imageView?.image = rounded
@@ -102,7 +152,6 @@ class SelectionViewController: UITableViewController {
 		dirty = false
 
 		// add to our view controller cache and show
-		viewControllers.append(vc)
-		navigationController!.pushViewController(vc, animated: true)
+		navigationController?.pushViewController(vc, animated: true)
 	}
 }
