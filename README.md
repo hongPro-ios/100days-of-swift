@@ -297,21 +297,25 @@ These final three projects introduce you to some key functionality that will rea
 - [x] ~~Day95 – Project 29, part two~~
  - 20210916 메모: https://www.notion.so/95day-e85edb349555479d9c3ea951f7509bb6
 - [x] ~~Day96 – Project 29, part three~~
- - 20210920 메모: https://www.notion.so/97day-3bda92b60ce54445ba65c1a918b75c8f
-- [ ] Day97 – Project 30, part one
-- [ ] Day98 – Project 30, part two
+ - 20210917 메모: https://www.notion.so/96day-dfc001ca25364444972a3917a4f7adb0
+- [x] Day97 – Project 30, part one
+ - 20210918 메모: https://www.notion.so/97day-3bda92b60ce54445ba65c1a918b75c8f
+- [x] Day98 – Project 30, part two
+ - 20210921 메모: https://www.notion.so/98day-d2114d452df34ddc9ae72eca49f32478
  
 
 - [ ] Day99: Consolidation XI
 It’s time to recap all the things you’ve learned in the last few days, and start work on a big challenge to go out with. You’ve got this!
 
-- [ ] Day99 – Milestone: Projects 28-30
+- [x] Day99 – Milestone: Projects 28-30
+ - 20210922 메모: https://www.notion.so/99day-ec92384cc45249aebbbfa586e116b375
  
 
 Wrap up
 It’s time to see how much you remember from across the entire curriculum. Are you ready for this?
 
-- [ ] Day100 – Final exam
+- [x] Day100 – Final exam
+ - 20210926 메모: https://www.notion.so/100day-e42fbe8524c14af1bb4df8047b0eb115
 Epilogue – What now?
  
 
